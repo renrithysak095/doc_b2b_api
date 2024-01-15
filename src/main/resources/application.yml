@@ -3,7 +3,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: 12345678
+    password: 123
     url:  jdbc:postgresql://localhost:5432/jwt_db
   jpa:
     hibernate:
