@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/renrithysak095/b2b_doc_config.git
+          clone-on-start: true
+          search-paths:
+            - user-service
+            - doc-service
+          default-label: master
+encrypt:
+  key: sdafghfdeweqads#sazdf1212
+server:
+  port: 8888

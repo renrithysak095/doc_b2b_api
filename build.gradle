@@ -1,0 +1,134 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.1'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+// Applying dependencies array - config
+apply from: "$rootProject.projectDir/dependencies.gradle"
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    set('springCloudVersion', "2022.0.4")
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
+allprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    // Apply external dependencies
+    apply from: "$rootProject.projectDir/dependencies.gradle"
+
+    group = 'com.example'
+    version = '0.0.1-SNAPSHOT'
+
+    java {
+        sourceCompatibility = '17'
+    }
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+
+    ext {
+        set('springCloudVersion', "2023.0.0")
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+        }
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+
+        //** Apply Module to Project needed Configuration **/
+
+        // Services - Enable files to Store at Global Registry
+        if (projectDir.name.startsWith("config-server")) {
+            // Apply config file to external server
+            implementation libraries.configServer
+        }
+
+        // Services - Apply Sub-Service to Sub-Service Config
+        if (projectDir.name.startsWith("doc-menu-service")) {
+            // Applying Common-Service
+            implementation project(':common-service')
+        }
+
+        // Services - Register Service to Eureka Needed
+        if (projectDir.name.startsWith("doc-menu-service")) {
+            // Enable to register service
+            implementation libraries.eurekaClient
+        }
+
+        // Services - Database Config Needed
+        if(projectDir.name.startsWith("doc-menu-service")){
+            if(!projectDir.name.startsWith("common-service")){
+                // Config db with PostgreSQL
+                implementation libraries.postgresql
+                // Config db with JPA
+                implementation libraries.jpa
+                // Config Jakatar validation
+                implementation libraries.validation
+            }
+        }
+
+        // Doc-Menu Service Config Needed
+        if(projectDir.name.startsWith("doc-menu-service")){
+            // Enable external file from config-server
+            implementation libraries.cloudClient
+        }
+
+        // Eureka-Server Config Needed
+        if(projectDir.name.startsWith("eureka-server")){
+            implementation libraries.webFlux
+            implementation libraries.eurekaServer
+            testImplementation  libraries.reactorTest
+            implementation libraries.cloudClient
+            testImplementation  libraries.startTest
+        }
+
+        //** Every Modules below Apply to Every Services **/
+        // Monitoring Configuration
+        implementation libraries.actuator
+        // Config Swagger-ui
+        implementation libraries.webMvc
+        // Apply Serialization value to Web Browser
+        implementation libraries.springWeb
+        // Getter - Setter in Short
+        compileOnly libraries.lombok
+        developmentOnly libraries.devtools
+        annotationProcessor libraries.annoDevtools
+        testImplementation libraries.startTest
+
+    }
+}
+

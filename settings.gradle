@@ -1,0 +1,5 @@
+rootProject.name = 'b2b_doc_api'
+include 'config-server'
+include 'eureka-server'
+include 'common-service'
+include 'doc-menu-service'
