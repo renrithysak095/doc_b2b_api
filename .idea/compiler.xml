@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.30/f195ee86e6c896ea47a1d39defbe20eb59cd149d/lombok-1.18.30.jar" />
+        </processorPath>
+        <module name="b2b_doc_api.eureka-server.main" />
+        <module name="b2b_doc_api.common-service.main" />
+        <module name="b2b_doc_api.config-server.main" />
+        <module name="b2b_doc_api.doc-menu-service.main" />
+        <module name="b2b_doc_api.gateway-service.main" />
+        <module name="b2b_doc_api.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="17" />
+  </component>
+</project>
