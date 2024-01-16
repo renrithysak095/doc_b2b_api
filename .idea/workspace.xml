@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7211d0cb-e8be-40c1-95e7-9402668d61d3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a639942f-4a37-4844-9e55-4e9e2fecfa0d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a639942f-4a37-4844-9e55-4e9e2fecfa0d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,53 +127,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build b2b_doc_api.executor": "Run",
-    "Gradle.Tests in 'b2b_doc_api.config-server'.executor": "Run",
-    "Gradle.Tests in 'b2b_doc_api.eureka-server'.executor": "Run",
-    "Gradle.b2b_doc_api [build].executor": "Run",
-    "Gradle.b2b_doc_api [clean].executor": "Run",
-    "Gradle.b2b_doc_api [dependencies].executor": "Run",
-    "Gradle.b2b_doc_api:config-server [:config-server:ConfigServiceApplication.main()].executor": "Run",
-    "Gradle.b2b_doc_api:config-server [build].executor": "Run",
-    "Gradle.b2b_doc_api:config-server [clean].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.ConfigServiceApplication.executor": "Run",
-    "Spring Boot.DocMenuServiceApplication.executor": "Run",
-    "Spring Boot.EurekaServiceApplication.executor": "Run",
-    "Spring Boot.GatewayServiceApplication.executor": "Run",
-    "git-widget-placeholder": "sak",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ksg-usr/Desktop/B2B_DOC_API/b2b_doc_api",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build b2b_doc_api.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'b2b_doc_api.config-server'.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'b2b_doc_api.eureka-server'.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.b2b_doc_api [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.b2b_doc_api [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.b2b_doc_api [dependencies].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.b2b_doc_api:config-server [:config-server:ConfigServiceApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.b2b_doc_api:config-server [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.b2b_doc_api:config-server [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ConfigServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.DocMenuServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EurekaServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sak&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ksg-usr/Desktop/B2B_DOC_API/b2b_doc_api&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ],
-    "DatabaseDriversLRU": [
-      "postgresql"
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ksg-usr\Desktop\B2B_DOC_API\b2b_doc_api" />
@@ -380,6 +382,7 @@
       <workItem from="1705299997339" duration="13780000" />
       <workItem from="1705367904640" duration="927000" />
       <workItem from="1705374794029" duration="15299000" />
+      <workItem from="1705392802508" duration="74000" />
     </task>
     <servers />
   </component>
