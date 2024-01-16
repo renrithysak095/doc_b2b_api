@@ -13,7 +13,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
         servers = @Server(url = "/", description = "Default Server URL"),
         info = @Info(
                 title = "Gateway Service",
-                description = "Started From 15/Jan/2024",
+                description = "Started From 15/Jan/2024.",
                 version = "1.0.0"
         )
 )
