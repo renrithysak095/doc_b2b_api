@@ -1,0 +1,3 @@
+[submodule "b2b_doc_config"]
+	path = b2b_doc_config
+	url = https://github.com/renrithysak095/b2b_doc_config.git
