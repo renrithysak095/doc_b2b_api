@@ -1,5 +1,6 @@
 rootProject.name = 'b2b_doc_api'
 include 'config-server'
 include 'eureka-server'
+include 'gateway-service'
 include 'common-service'
 include 'doc-menu-service'

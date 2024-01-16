@@ -10,10 +10,8 @@ import org.springframework.http.HttpStatus;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ApiResponse <T>{
-
     private String message;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private T payload;
     private HttpStatus status;
-
 }

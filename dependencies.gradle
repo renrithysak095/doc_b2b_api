@@ -34,5 +34,4 @@ ext.libraries = [
             jakatar: 'jakarta.platform:jakarta.jakartaee-api:9.1.0',
             auth0: 'com.auth0:java-jwt:3.18.1'
 
-
     ]

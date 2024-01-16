@@ -12,4 +12,4 @@ import io.swagger.v3.oas.annotations.servers.Server;
                 version = "1.0.0"
         )
 )
-public class OpenApiConfig { }
+public class OpenApiConfig {}

@@ -84,9 +84,17 @@ allprojects {
         }
 
         // Services - Register Service to Eureka Needed
-        if (projectDir.name.startsWith("doc-menu-service")) {
+        if (projectDir.name.startsWith("doc-menu-service") ||
+            projectDir.name.startsWith("gateway-service")) {
+            // Only Gateway-Service got this config
+            if(projectDir.name.startsWith("gateway-service")){
+                implementation libraries.starterWebFlux
+                implementation libraries.gateway
+            }
             // Enable to register service
             implementation libraries.eurekaClient
+            // Enable external file from config-server
+            implementation libraries.cloudClient
         }
 
         // Services - Database Config Needed
@@ -98,13 +106,8 @@ allprojects {
                 implementation libraries.jpa
                 // Config Jakatar validation
                 implementation libraries.validation
+                implementation libraries.webFlux
             }
-        }
-
-        // Doc-Menu Service Config Needed
-        if(projectDir.name.startsWith("doc-menu-service")){
-            // Enable external file from config-server
-            implementation libraries.cloudClient
         }
 
         // Eureka-Server Config Needed
@@ -116,13 +119,17 @@ allprojects {
             testImplementation  libraries.startTest
         }
 
+        if(!projectDir.name.startsWith("gateway-service")){
+            // Not Apply Serialization value to Web Browser
+            implementation libraries.springWeb
+            // Config Swagger-ui
+            implementation libraries.webMvc
+        }
+
         //** Every Modules below Apply to Every Services **/
+
         // Monitoring Configuration
         implementation libraries.actuator
-        // Config Swagger-ui
-        implementation libraries.webMvc
-        // Apply Serialization value to Web Browser
-        implementation libraries.springWeb
         // Getter - Setter in Short
         compileOnly libraries.lombok
         developmentOnly libraries.devtools

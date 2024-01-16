@@ -10,6 +10,7 @@ spring:
           search-paths:
             - user-service
             - doc-service
+            - gateway-service
           default-label: master
 encrypt:
   key: sdafghfdeweqads#sazdf1212
