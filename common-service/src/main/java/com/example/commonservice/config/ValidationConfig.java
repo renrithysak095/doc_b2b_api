@@ -5,11 +5,15 @@ import org.springframework.context.annotation.Configuration;
 public class ValidationConfig {
 
     public static final String USER_REQUIRED_MESSAGE = "username is required";
-    public static final String USER_RESPONSE_MESSAGE = "username must be between 3 and 50 characters";
+    public static final String DEPT_REQUIRED = "department id is required";
+    public static final String DEPT_EMPTY = "department id cannot be empty";
+    public static final String NOT_FOUND_ROLE = "role is out of scope ('VIEWER', 'MANAGER','ADMIN')";
+    public static final String INVALID_CREDENTIALS = "username or password incorrect";
+    public static final String USER_RESPONSE_MESSAGE = "username must be between 3 and 25 characters";
     public static final int USER_VALIDATION_MIN = 3;
     public static final int USER_VALIDATION_MAX = 50;
     public static final String PASSWORD_REQUIRED_MESSAGE = "password is required";
-    public static final String PASSWORD_RESPONSE_MESSAGE = "password must be at least 6 characters";
+    public static final String PASSWORD_RESPONSE_MESSAGE = "password cannot be empty";
     public static final String PASSWORD_RESPONSE_REG_MESSAGE = "a valid password must at least 6 characters, and it must include at least one uppercase letter, one lowercase letter,one symbol, and one number";
     public static final String PASSWORD_VALIDATION_REG = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()\\-_=+{};:,<.>])(?!.*\\s).{6,}$";
     public static final int PASSWORD_VALIDATION_MIN = 6;
@@ -17,7 +21,7 @@ public class ValidationConfig {
     public static final String EMAIL_REQUIRED_MESSAGE = "email is required";
     public static final String EMAIL_RESPONSE_MESSAGE = "email must be a valid email address";
     public static final String ROLE_REQUIRED_MESSAGE = "roles are required";
-    public static final String ROLE_RESPONSE_MESSAGE = "at least one role must be specified";
+    public static final String ROLE_RESPONSE_MESSAGE = "role cannot be empty";
     public static final int ROLE_VALIDATION_MIN = 1;
     public static final String FIRSTNAME_REQUIRED_MESSAGE = "firstname cannot be empty";
     public static final String FIRSTNAME_RESPONSE_MESSAGE = "firstname cannot exceed 50 characters";
@@ -28,7 +32,7 @@ public class ValidationConfig {
     public static final String OTP_RESPONSE_MESSAGE = "otpCode must be at least 6 characters";
     public static final int OTP_VALIDATION_MIN = 6;
     public static final String NOTFOUND_USER = "user not found";
-    public static final String EMPTY_USER = "waiting user to registration";
+    public static final String EMPTY_USER = "user is not containing in list";
     public static final String WHITE_SPACE = "password cannot be whitespace";
     public static final String USER_INVALID = "email/Username or password is incorrect";
     public static final String REQUIRED_OTP = "sending otpCode is required";
@@ -44,7 +48,7 @@ public class ValidationConfig {
     public static final int MAX_PH = 9;
     public static final int MIN_PH = 8;
     public static final String INVALID_PH = "phone number is invalid";
-    public static final String ILLEGAL_FILE = "invalid file extension. Allowed extensions are: .jpg, .jpeg, .png, .tiff";
+    public static final String ILLEGAL_FILE = "invalid image extension. Allowed extensions are: .jpg, .jpeg, .png, .tiff";
     public static final String NULL_GENDER = "gender cannot be null";
     public static final String SHOP_NOTFOUND = "shop not found";
     public static final String POST_NOTFOUND = "posted not found";

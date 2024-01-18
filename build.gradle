@@ -78,13 +78,15 @@ allprojects {
         }
 
         // Services - Apply Sub-Service to Sub-Service Config
-        if (projectDir.name.startsWith("doc-menu-service")) {
+        if (projectDir.name.startsWith("doc-menu-service") ||
+            projectDir.name.startsWith("auth-service")) {
             // Applying Common-Service
             implementation project(':common-service')
         }
 
         // Services - Register Service to Eureka Needed
         if (projectDir.name.startsWith("doc-menu-service") ||
+            projectDir.name.startsWith("auth-service") ||
             projectDir.name.startsWith("gateway-service")) {
             // Only Gateway-Service got this config
             if(projectDir.name.startsWith("gateway-service")){
@@ -98,7 +100,8 @@ allprojects {
         }
 
         // Services - Database Config Needed
-        if(projectDir.name.startsWith("doc-menu-service")){
+        if(projectDir.name.startsWith("doc-menu-service") ||
+           projectDir.name.startsWith("auth-service")){
             if(!projectDir.name.startsWith("common-service")){
                 // Config db with PostgreSQL
                 implementation libraries.postgresql
@@ -108,6 +111,19 @@ allprojects {
                 implementation libraries.validation
                 implementation libraries.webFlux
             }
+        }
+
+        // Services - JWT Config Needed
+        if(projectDir.name.startsWith("auth-service")){
+            implementation libraries.ioJWT
+            implementation libraries.security
+            testImplementation libraries.securityTest
+            implementation 'javax.xml.bind:jaxb-api:2.3.1'
+            implementation 'javax.servlet:javax.servlet-api:4.0.1'
+            implementation 'org.apache.poi:poi:5.0.0'
+            implementation 'org.apache.poi:poi-ooxml:5.0.0'
+            implementation 'javax.xml.bind:jaxb-api:2.3.1'
+            implementation 'org.glassfish.jaxb:jaxb-runtime:2.3.3'
         }
 
         // Eureka-Server Config Needed

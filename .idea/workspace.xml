@@ -5,9 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7211d0cb-e8be-40c1-95e7-9402668d61d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a639942f-4a37-4844-9e55-4e9e2fecfa0d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a639942f-4a37-4844-9e55-4e9e2fecfa0d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-service/build/classes/java/main/com/example/commonservice/config/ValidationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-service/build/classes/java/main/com/example/commonservice/config/ValidationConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-service/build/classes/java/main/com/example/commonservice/response/ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-service/build/classes/java/main/com/example/commonservice/response/ApiResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-service/build/libs/common-service-0.0.1-SNAPSHOT-plain.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common-service/build/libs/common-service-0.0.1-SNAPSHOT-plain.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-service/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/common-service/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-service/src/main/java/com/example/commonservice/config/ValidationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-service/src/main/java/com/example/commonservice/config/ValidationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-service/src/main/java/com/example/commonservice/response/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-service/src/main/java/com/example/commonservice/response/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-files/auth-service/auth-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-files/auth-service/auth-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/build/resources/main/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/dependencies.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,54 +73,18 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="b2b_doc_api" type="f1a62948:ProjectNode" />
-                <item name="doc-menu-service" type="2d1252cf:ModuleNode" />
+                <item name="auth-service" type="2d1252cf:ModuleNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="b2b_doc_api" type="f1a62948:ProjectNode" />
-                <item name="doc-menu-service" type="2d1252cf:ModuleNode" />
+                <item name="auth-service" type="2d1252cf:ModuleNode" />
                 <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="b2b_doc_api" type="f1a62948:ProjectNode" />
-                <item name="doc-menu-service" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="b2b_doc_api" type="f1a62948:ProjectNode" />
-                <item name="eureka-server" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="b2b_doc_api" type="f1a62948:ProjectNode" />
-                <item name="eureka-server" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="b2b_doc_api" type="f1a62948:ProjectNode" />
-                <item name="eureka-server" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="b2b_doc_api" type="f1a62948:ProjectNode" />
-                <item name="gateway-service" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="b2b_doc_api" type="f1a62948:ProjectNode" />
-                <item name="gateway-service" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="b2b_doc_api" type="f1a62948:ProjectNode" />
-                <item name="gateway-service" type="2d1252cf:ModuleNode" />
+                <item name="auth-service" type="2d1252cf:ModuleNode" />
                 <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
                 <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
               </path>
@@ -109,6 +99,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -127,56 +118,67 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build b2b_doc_api.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'b2b_doc_api.config-server'.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'b2b_doc_api.eureka-server'.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.b2b_doc_api [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.b2b_doc_api [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.b2b_doc_api [dependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.b2b_doc_api:config-server [:config-server:ConfigServiceApplication.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.b2b_doc_api:config-server [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.b2b_doc_api:config-server [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ConfigServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.DocMenuServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.EurekaServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;sak&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ksg-usr/Desktop/B2B_DOC_API/b2b_doc_api&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build b2b_doc_api.executor": "Run",
+    "Gradle.Tests in 'b2b_doc_api.config-server'.executor": "Run",
+    "Gradle.Tests in 'b2b_doc_api.eureka-server'.executor": "Run",
+    "Gradle.b2b_doc_api [build].executor": "Run",
+    "Gradle.b2b_doc_api [clean].executor": "Run",
+    "Gradle.b2b_doc_api [dependencies].executor": "Run",
+    "Gradle.b2b_doc_api:config-server [:config-server:ConfigServiceApplication.main()].executor": "Run",
+    "Gradle.b2b_doc_api:config-server [build].executor": "Run",
+    "Gradle.b2b_doc_api:config-server [clean].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.AuthServiceApplication.executor": "Run",
+    "Spring Boot.ConfigServiceApplication.executor": "Run",
+    "Spring Boot.DocMenuServiceApplication (1).executor": "Run",
+    "Spring Boot.DocMenuServiceApplication.executor": "Run",
+    "Spring Boot.EurekaServiceApplication.executor": "Run",
+    "Spring Boot.GatewayServiceApplication.executor": "Run",
+    "git-widget-placeholder": "sak__v1",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ksg-usr/Desktop/B2B_DOC_API/b2b_doc_api/auth-service/src/main/java/com/example/authservice/config",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "service.view.auto.scroll.from.source": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;,
-      &quot;repository&quot;
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
     ],
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ksg-usr\Desktop\B2B_DOC_API\b2b_doc_api" />
+      <recent name="C:\Users\ksg-usr\Desktop\B2B_DOC_API\b2b_doc_api\auth-service\src\main\java\com\example\authservice\config" />
+      <recent name="C:\Users\ksg-usr\Desktop\B2B_DOC_API\b2b_doc_api\auth-service\src\main\java\com\example\authservice\model" />
+      <recent name="C:\Users\ksg-usr\Desktop\B2B_DOC_API\b2b_doc_api\auth-service\src\main\java\com\example\authservice\repository" />
+      <recent name="C:\Users\ksg-usr\Desktop\B2B_DOC_API\b2b_doc_api\auth-service\src\main\java\com\example\authservice\response" />
+      <recent name="C:\Users\ksg-usr\Desktop\B2B_DOC_API\b2b_doc_api\auth-service\src\main\java\com\example\authservice\request" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.authservice.config" />
+      <recent name="com.example.authservice.response" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -188,7 +190,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GatewayServiceApplication">
+  <component name="RunManager" selected="Spring Boot.AuthServiceApplication">
     <configuration name="ConfigServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.configservice.ConfigServiceApplication" />
       <module name="b2b_doc_api.config-server.main" />
@@ -222,28 +224,6 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="b2b_doc_api [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="b2b_doc_api:config-server [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -290,6 +270,21 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="b2b_doc_api.auth-service.main" />
+      <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.authservice.AuthServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.authservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="B2bDocApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="b2b_doc_api.main" />
@@ -310,6 +305,14 @@
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="b2b_doc_api.config-server.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.configservice.ConfigServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DocMenuServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="b2b_doc_api.doc-menu-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.docmenuservice.DocMenuServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -338,26 +341,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.ConfigServiceApplication" />
-      <item itemvalue="Gradle.b2b_doc_api [build]" />
       <item itemvalue="Gradle.b2b_doc_api:config-server [build]" />
       <item itemvalue="Gradle.b2b_doc_api:config-server [clean]" />
       <item itemvalue="Gradle.Tests in 'b2b_doc_api.eureka-server'" />
+      <item itemvalue="Spring Boot.DocMenuServiceApplication (1)" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.ConfigServiceApplication" />
       <item itemvalue="Spring Boot.B2bDocApiApplication" />
       <item itemvalue="Spring Boot.CommonServiceApplication" />
       <item itemvalue="Spring Boot.DocMenuServiceApplication" />
       <item itemvalue="Spring Boot.EurekaServiceApplication" />
+      <item itemvalue="Spring Boot.AuthServiceApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.AuthServiceApplication" />
         <item itemvalue="Gradle.Tests in 'b2b_doc_api.eureka-server'" />
         <item itemvalue="Application.ConfigServiceApplication" />
         <item itemvalue="Gradle.b2b_doc_api:config-server [build]" />
         <item itemvalue="Gradle.b2b_doc_api:config-server [clean]" />
-        <item itemvalue="Gradle.b2b_doc_api [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -382,7 +392,13 @@
       <workItem from="1705299997339" duration="13780000" />
       <workItem from="1705367904640" duration="927000" />
       <workItem from="1705374794029" duration="15299000" />
-      <workItem from="1705392802508" duration="74000" />
+      <workItem from="1705392802508" duration="5468000" />
+      <workItem from="1705404962638" duration="2414000" />
+      <workItem from="1705408118322" duration="3246000" />
+      <workItem from="1705453422400" duration="1332000" />
+      <workItem from="1705464611027" duration="8803000" />
+      <workItem from="1705478374894" duration="4203000" />
+      <workItem from="1705540066172" duration="5448000" />
     </task>
     <servers />
   </component>
