@@ -21,6 +21,7 @@ public class GatewayServiceApplication {
                 .routes()
                 .route(r -> r.path("/gateway-service/v3/api-docs").uri("lb://gateway-service"))
                 .route(r -> r.path("/doc-service/v3/api-docs").uri("lb://doc-service"))
+                .route(r -> r.path("/auth-service/v3/api-docs").uri("lb://auth-service"))
                 .build();
     }
 }
