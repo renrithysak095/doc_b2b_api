@@ -12,4 +12,6 @@ public interface ImageService {
     FileResponse saveImage(Long userId, MultipartFile file, HttpServletRequest request) throws IOException;
 
     ByteArrayResource getImage(String fileName) throws IOException;
+
+    FileResponse uploadImage(MultipartFile file, HttpServletRequest request) throws IOException;
 }

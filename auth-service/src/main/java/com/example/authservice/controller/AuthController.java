@@ -55,6 +55,18 @@ public class AuthController {
         ), HttpStatus.OK);
     }
 
+    @PostMapping("/url/login")
+    @Operation(summary = "login via url")
+    public ResponseEntity<ApiResponse<UserResponse>> urlLogin(String url){
+        return new ResponseEntity<>(new ApiResponse<>(
+                "user logged-in successfully",
+                authService.urlLogin(url),
+                LocalDateTime.now()
+        ), HttpStatus.OK);
+    }
+
+
+
     private void authenticate(String username, String password) throws Exception {
         try {
             authenticate.authenticate(new UsernamePasswordAuthenticationToken(username, password));

@@ -5,6 +5,12 @@ import org.springframework.context.annotation.Configuration;
 public class ValidationConfig {
 
     public static final String USER_REQUIRED_MESSAGE = "username is required";
+    public static final String TAG_NOT_EMPTY = "tag cannot be empty";
+    public static final String POST_TITLE_EMPTY = "title cannot be empty";
+    public static final String NOT_FOUND_QUESTION = "question is not found";
+    public static final String EMPTY_QUESTION = "question is not existing";
+    public static final String INCORRECT_PW = "current password is incorrect";
+    public static final String NOT_FOUND_DEPT = "department is not found";
     public static final String DEPT_REQUIRED = "department id is required";
     public static final String DEPT_EMPTY = "department id cannot be empty";
     public static final String NOT_FOUND_ROLE = "role is out of scope ('VIEWER', 'MANAGER','ADMIN')";
@@ -92,7 +98,7 @@ public class ValidationConfig {
     public static final String NOT_FOUND_PRODUCTS_IN_UR_SHOP = "product in this shop is not containing";
     public static final String SUB_CATEGORY_RESPONSE = "subCategory contain at least 1";
     public static final String INVALID_STRING = "This field is invalid";
-    public static final String REGEX_ROLES = "\\[|\\]";
+    public static final String REGEX_STRING = "\\[|\\]";
     public static final String CANNOT_UPDATE = "you cannot update this product";
     public static final String CANNOT_DELETE = "you cannot delete this product";
     public static final String CANNOT_UPLOAD = "you cannot upload a photo to this product";

@@ -2,10 +2,7 @@ package com.example.authservice.enitity;
 
 import com.example.authservice.response.AuthResponse;
 import com.example.authservice.response.UserResponse;
-import com.example.commonservice.config.ValidationConfig;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -28,12 +25,10 @@ public class Auth implements UserDetails {
     private String username;
     @Column(nullable = false)
     private String password;
-    @Column(nullable = false)
+    private String url;
     private Long deptId;
-    @Column(nullable = false)
     private String role;
     private String image;
-    @Column(nullable = false)
     private Boolean status;
     @Column(nullable = false)
     private LocalDateTime cred_dt;
@@ -41,7 +36,7 @@ public class Auth implements UserDetails {
     private LocalDateTime last_md;
 
     public AuthResponse toDto(){
-        return new AuthResponse(id,username,deptId,role,image,cred_dt);
+        return new AuthResponse(id,username,url,deptId,role,image,cred_dt);
     }
     public UserResponse toResponse(String token){
         return new UserResponse(id,username,token,deptId,role,image,cred_dt,last_md);

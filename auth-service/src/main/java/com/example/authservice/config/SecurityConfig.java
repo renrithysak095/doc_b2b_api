@@ -57,13 +57,17 @@ public class SecurityConfig {
                 .authorizeHttpRequests(request -> request
                         .requestMatchers(
                                 "/api/v1/auth/login",
+                                "/api/v1/auth/url/login",
                                 "/api/v1/auth/register",
                                 "/api/v1/image",
+                                "/api/v1/image/{userId}",
                                 "/api/v1/users",
                                 "/api/v1/users/{userId}",
+                                "/api/v1/users/reset-password/{userId}",
                                 "auth-service/v3/api-docs/**",
                                 "auth-service/swagger-ui/**",
                                 "auth-service/swagger-ui.html").permitAll()
+                        .requestMatchers("/api/v1/auth/register").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling()

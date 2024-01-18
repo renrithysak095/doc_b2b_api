@@ -5,19 +5,25 @@ import com.example.authservice.enumeration.Role;
 import com.example.authservice.exception.NotFoundExceptionClass;
 import com.example.authservice.repository.AuthRepository;
 import com.example.authservice.request.AuthRequest;
+import com.example.authservice.request.ResetPassword;
 import com.example.authservice.response.AuthResponse;
 import com.example.commonservice.config.ValidationConfig;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
 public class UserServiceImpl implements UserService{
     private final AuthRepository authRepository;
     private final PasswordEncoder passwordEncoder;
+
+    @Value("${baseURL}")
+    private String baseURL;
 
     public UserServiceImpl(AuthRepository authRepository, PasswordEncoder passwordEncoder) {
         this.authRepository = authRepository;
@@ -50,14 +56,32 @@ public class UserServiceImpl implements UserService{
     @Override
     public AuthResponse updateUserById(Long userId, AuthRequest request) {
         Auth auth = findUserById(userId);
+        if(auth.getUsername().equalsIgnoreCase(request.getUsername())){
+            throw new IllegalArgumentException(ValidationConfig.EXISTING_USERNAME);
+        }
         validRole(request.getRole());
-        auth.setRole(request.getRole());
+        auth.setRole(request.getRole().toUpperCase());
+        auth.setUrl(baseURL + "/" + passwordEncoder.encode(request.getUsername()) + UUID.randomUUID());
         auth.setStatus(request.getStatus());
         auth.setPassword(passwordEncoder.encode(request.getPassword()));
         auth.setDeptId(request.getDeptId());
         auth.setUsername(request.getUsername());
         auth.setLast_md(LocalDateTime.now());
         return authRepository.save(auth).toDto();
+    }
+
+    @Override
+    public Void resetPassword(Long userId, ResetPassword request) {
+        Auth auth = findUserById(userId);
+        if(passwordEncoder.encode(request.getConfPw()).equalsIgnoreCase(auth.getPassword())){
+            if(request.getNewPw().equalsIgnoreCase(request.getConfPw())){
+                auth.setPassword(passwordEncoder.encode(request.getNewPw()));
+                auth.setUrl(baseURL + "/" + passwordEncoder.encode(auth.getUsername()) + UUID.randomUUID());
+                authRepository.save(auth);
+                return null;
+            }
+        }
+        throw new IllegalArgumentException(ValidationConfig.INCORRECT_PW);
     }
 
     public Auth findUserById(Long userId){

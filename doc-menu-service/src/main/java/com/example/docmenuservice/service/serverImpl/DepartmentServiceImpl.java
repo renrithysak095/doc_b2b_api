@@ -1,5 +1,6 @@
 package com.example.docmenuservice.service.serverImpl;
 
+import com.example.docmenuservice.exception.NotFoundExceptionClass;
 import com.example.docmenuservice.model.entity.Department;
 import com.example.docmenuservice.model.request.DepartmentRequest;
 import com.example.docmenuservice.repository.DepartmentRepository;
@@ -25,7 +26,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public Department getDepartmentById(Long id) {
-        return departmentRepository.findById(id).get();
+        return departmentRepository.findById(id).orElseThrow(() -> new NotFoundExceptionClass("Department is not found"));
     }
 
     @Override

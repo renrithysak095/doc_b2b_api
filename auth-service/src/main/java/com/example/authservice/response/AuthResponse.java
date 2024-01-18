@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 public class AuthResponse {
     private Long id;
     private String username;
+    private String url;
     private Long deptId;
     private String role;
     private String image;

@@ -2,10 +2,11 @@ package com.example.authservice.service.image;
 
 import com.example.authservice.config.FileStorageProperties;
 import com.example.authservice.enitity.Auth;
+import com.example.authservice.enitity.FileImage;
 import com.example.authservice.exception.NotFoundExceptionClass;
 import com.example.authservice.repository.AuthRepository;
+import com.example.authservice.repository.ImageRepository;
 import com.example.authservice.response.FileResponse;
-import com.example.authservice.service.auth.AuthServiceImpl;
 import com.example.commonservice.config.ValidationConfig;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.core.io.ByteArrayResource;
@@ -25,9 +26,12 @@ public class ImageServiceImpl implements ImageService{
     private final FileStorageProperties fileStorageProperties;
     private final AuthRepository authRepository;
 
-    public ImageServiceImpl(FileStorageProperties fileStorageProperties, AuthRepository authRepository) {
+    private final ImageRepository imageRepository;
+
+    public ImageServiceImpl(FileStorageProperties fileStorageProperties, AuthRepository authRepository, ImageRepository imageRepository) {
         this.fileStorageProperties = fileStorageProperties;
         this.authRepository = authRepository;
+        this.imageRepository = imageRepository;
     }
 
     @Override
@@ -59,6 +63,21 @@ public class ImageServiceImpl implements ImageService{
         String uploadPath = fileStorageProperties.getUploadPath();
         Path paths = Paths.get(uploadPath + fileName);
         return new ByteArrayResource(Files.readAllBytes(paths));
+    }
+
+    @Override
+    public FileResponse uploadImage(MultipartFile file, HttpServletRequest request) throws IOException {
+        String uploadPath = fileStorageProperties.getUploadPath();
+        Path directoryPath = Paths.get(uploadPath).toAbsolutePath().normalize();
+        java.io.File directory = directoryPath.toFile();
+        if (!directory.exists()) {
+            directory.mkdirs();
+        }
+        String fileName = UUID.randomUUID() + file.getOriginalFilename().replaceAll("\\s+","");
+        validateImages(fileName);
+        File dest = new File(directoryPath.toFile(), fileName);
+        file.transferTo(dest);
+        return imageRepository.save(new FileImage(null,fileName,file.getContentType(), file.getSize())).toDto();
     }
 
     // Validation String image

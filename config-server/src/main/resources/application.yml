@@ -10,6 +10,7 @@ spring:
           search-paths:
             - user-service
             - auth-service
+            - help-service
             - doc-service
             - gateway-service
           default-label: master

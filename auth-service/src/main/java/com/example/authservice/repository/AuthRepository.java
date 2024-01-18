@@ -10,5 +10,5 @@ import java.util.UUID;
 public interface AuthRepository extends JpaRepository<Auth, Long> {
     UserDetails findByUsername(String username);
     Auth getByUsername(String username);
-
+    Auth findByUrl(String url);
 }

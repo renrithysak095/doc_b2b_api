@@ -38,6 +38,16 @@ public class FileController {
         ), HttpStatus.OK);
     }
 
+    @PostMapping(value = "", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<ApiResponse<FileResponse>> uploadImage(@RequestParam(required = false) MultipartFile file,
+                                                              HttpServletRequest request) throws Exception {
+        return new ResponseEntity<>(new ApiResponse<>(
+                "image upload successfully",
+                imageService.uploadImage(file,request),
+                LocalDateTime.now()
+        ), HttpStatus.OK);
+    }
+
     @GetMapping("")
     public ResponseEntity<ByteArrayResource> getFileByFileName(@RequestParam String fileName) throws IOException {
         return ResponseEntity.ok().contentType(MediaType.IMAGE_PNG).body(imageService.getImage(fileName));

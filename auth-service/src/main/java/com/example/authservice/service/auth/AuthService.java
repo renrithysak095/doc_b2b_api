@@ -9,4 +9,5 @@ import org.springframework.stereotype.Service;
 public interface AuthService extends UserDetailsService {
     AuthResponse register(AuthRequest request);
     UserResponse login(UserRequest request) throws Exception;
+    UserResponse urlLogin(String url);
 }

@@ -79,6 +79,8 @@ allprojects {
 
         // Services - Apply Sub-Service to Sub-Service Config
         if (projectDir.name.startsWith("doc-menu-service") ||
+            projectDir.name.startsWith("help-service") ||
+            projectDir.name.startsWith("upload-service") ||
             projectDir.name.startsWith("auth-service")) {
             // Applying Common-Service
             implementation project(':common-service')
@@ -87,6 +89,8 @@ allprojects {
         // Services - Register Service to Eureka Needed
         if (projectDir.name.startsWith("doc-menu-service") ||
             projectDir.name.startsWith("auth-service") ||
+            projectDir.name.startsWith("upload-service") ||
+            projectDir.name.startsWith("help-service") ||
             projectDir.name.startsWith("gateway-service")) {
             // Only Gateway-Service got this config
             if(projectDir.name.startsWith("gateway-service")){
@@ -101,6 +105,8 @@ allprojects {
 
         // Services - Database Config Needed
         if(projectDir.name.startsWith("doc-menu-service") ||
+           projectDir.name.startsWith("help-service") ||
+           projectDir.name.startsWith("upload-service") ||
            projectDir.name.startsWith("auth-service")){
             if(!projectDir.name.startsWith("common-service")){
                 // Config db with PostgreSQL

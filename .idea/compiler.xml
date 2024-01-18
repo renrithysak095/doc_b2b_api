@@ -12,6 +12,7 @@
         <module name="b2b_doc_api.config-server.main" />
         <module name="b2b_doc_api.doc-menu-service.main" />
         <module name="b2b_doc_api.main" />
+        <module name="b2b_doc_api.help-service.main" />
         <module name="b2b_doc_api.auth-service.main" />
         <module name="b2b_doc_api.gateway-service.main" />
       </profile>

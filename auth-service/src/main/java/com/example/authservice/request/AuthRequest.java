@@ -25,8 +25,8 @@ public class AuthRequest {
     @NotEmpty(message = ValidationConfig.ROLE_RESPONSE_MESSAGE)
     private String role;
     private Boolean status;
-    public Auth toEntity(LocalDateTime credDt, LocalDateTime lastMd){
-        return new Auth(null,this.username.toLowerCase(),this.password,this.deptId,role,null,status,credDt,lastMd);
+    public Auth toEntity(LocalDateTime credDt, LocalDateTime lastMd, String url){
+        return new Auth(null,this.username.toLowerCase(),this.password,url,this.deptId,role.toUpperCase(),null,status,credDt,lastMd);
     }
 
 }

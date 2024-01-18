@@ -1,6 +1,7 @@
 package com.example.authservice.controller;
 
 import com.example.authservice.request.AuthRequest;
+import com.example.authservice.request.ResetPassword;
 import com.example.authservice.response.AuthResponse;
 import com.example.authservice.service.user.UserService;
 import com.example.commonservice.response.ApiResponse;
@@ -15,7 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/users")
-@Tag(name = "List - Users")
+@Tag(name = "Users")
 @CrossOrigin
 public class UserController {
     private final UserService userService;
@@ -55,6 +56,17 @@ public class UserController {
         ), HttpStatus.OK);
     }
 
+    @PutMapping("/reset-password/{userId}")
+    @Operation(summary = "reset password")
+    public ResponseEntity<ApiResponse<Void>> resetPassword(@PathVariable Long userId,
+                                                                   @RequestBody @Valid ResetPassword request){
+        return new ResponseEntity<>(new ApiResponse<>(
+                "password changed successfully",
+                userService.resetPassword(userId,request),
+                LocalDateTime.now()
+        ), HttpStatus.OK);
+    }
+
     @DeleteMapping("/{userId}")
     @Operation(summary = "delete user by id")
     public ResponseEntity<ApiResponse<Void>> deleteUserById(@PathVariable Long userId){
@@ -64,7 +76,6 @@ public class UserController {
                 LocalDateTime.now()
         ), HttpStatus.OK);
     }
-
 
 
 
