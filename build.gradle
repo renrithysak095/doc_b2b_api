@@ -81,7 +81,8 @@ allprojects {
         if (projectDir.name.startsWith("doc-menu-service") ||
             projectDir.name.startsWith("help-service") ||
             projectDir.name.startsWith("upload-service") ||
-            projectDir.name.startsWith("auth-service")) {
+            projectDir.name.startsWith("auth-service") ||
+            projectDir.name.startsWith("main-title-service")) {
             // Applying Common-Service
             implementation project(':common-service')
         }
@@ -91,7 +92,8 @@ allprojects {
             projectDir.name.startsWith("auth-service") ||
             projectDir.name.startsWith("upload-service") ||
             projectDir.name.startsWith("help-service") ||
-            projectDir.name.startsWith("gateway-service")) {
+            projectDir.name.startsWith("gateway-service") ||
+            projectDir.name.startsWith("main-title-service")) {
             // Only Gateway-Service got this config
             if(projectDir.name.startsWith("gateway-service")){
                 implementation libraries.starterWebFlux
@@ -107,7 +109,8 @@ allprojects {
         if(projectDir.name.startsWith("doc-menu-service") ||
            projectDir.name.startsWith("help-service") ||
            projectDir.name.startsWith("upload-service") ||
-           projectDir.name.startsWith("auth-service")){
+           projectDir.name.startsWith("auth-service") ||
+           projectDir.name.startsWith("main-title-service")){
             if(!projectDir.name.startsWith("common-service")){
                 // Config db with PostgreSQL
                 implementation libraries.postgresql
