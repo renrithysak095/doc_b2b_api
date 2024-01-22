@@ -10,7 +10,7 @@ import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import io.swagger.v3.oas.annotations.servers.Server;
 
 @OpenAPIDefinition(
-        servers = @Server(url = "/", description = "Default Server URL"),
+        servers = @Server(url = "http://192.168.178.72/", description = "Default Server URL"),
         info = @Info(
                 title = "Gateway Service",
                 description = "Started From 15/Jan/2024",

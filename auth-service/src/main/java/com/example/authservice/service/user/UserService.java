@@ -14,4 +14,5 @@ public interface UserService {
     Void removeUserById(Long userId);
     AuthResponse updateUserById(Long userId, AuthRequest request);
     Void resetPassword(Long userId, ResetPassword request);
+    AuthResponse approveUserById(Long userId);
 }

@@ -48,9 +48,9 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public AuthResponse register(AuthRequest request) {
         validRole(request.getRole());
-//        validateDepartment(request.getDeptId());
+        validateDepartment(request.getDeptId());
         request.setPassword(passwordEncoder.encode(request.getPassword()));
-        return authRepository.save(request.toEntity(LocalDateTime.now(),LocalDateTime.now(), baseURL + "/" + passwordEncoder.encode(request.getUsername()) + UUID.randomUUID())).toDto();
+        return authRepository.save(request.toEntity(LocalDateTime.now(),LocalDateTime.now(), baseURL  + passwordEncoder.encode(request.getUsername()) + UUID.randomUUID())).toDto();
     }
 
     @Override
@@ -73,7 +73,7 @@ public class AuthServiceImpl implements AuthService {
     // Validate role
     public void validRole(String role){
         for (Role enumRole : Role.values()) {
-            if (enumRole.name().equals(role)) {
+            if (enumRole.name().equals(role.toUpperCase())) {
                 return;
             }
         }
