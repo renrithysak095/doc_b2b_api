@@ -1,10 +1,12 @@
 package com.example.docmenuservice.controller;
 
+import com.example.docmenuservice.model.dto.DepartmentDto;
 import com.example.docmenuservice.model.entity.Department;
 import com.example.docmenuservice.model.request.DepartmentRequest;
 import com.example.docmenuservice.model.response.ResponseBody;
 import com.example.docmenuservice.service.interfaces.DepartmentService;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,14 +26,10 @@ public class DepartmentController {
     }
 
     @GetMapping("/getDepartment")
-    public ResponseEntity<?> getDepartment() {
-        List<Department> departments = departmentService.getAllDepartment();
-        ResponseBody<Object> responseBody = ResponseBody.builder().
-                payload(departments).
-                status(200).
-                time(LocalDateTime.now()).
-                build();
-        return ResponseEntity.ok(responseBody);
+    public ResponseEntity<List<DepartmentDto>> getDepartment() {
+        List<DepartmentDto> departments = departmentService.getAllDepartment();
+
+        return new ResponseEntity<>(departments, HttpStatus.OK);
     }
 
     @GetMapping("/getDepartmentById/{id}")
@@ -46,14 +44,13 @@ public class DepartmentController {
     }
 
     @PostMapping("/addDepartment")
-    public ResponseEntity<?> addDepartment(@RequestBody DepartmentRequest departmentRequest) {
-        Department department = departmentService.addDepartment(departmentRequest);
-        ResponseBody<Object> responseBody = ResponseBody.builder().
-                payload(department).
-                status(200).
-                time(LocalDateTime.now()).
-                build();
-        return ResponseEntity.ok(responseBody);
+    public ResponseBody<DepartmentDto> addDepartment(@RequestBody DepartmentRequest departmentRequest) {
+        var payload= departmentService.addDepartment(departmentRequest);
+        return ResponseBody.<DepartmentDto>builder()
+                .status(200)
+                .payload(payload)
+                .time(LocalDateTime.now())
+                .build();
     }
 
     @PutMapping("/updateDepartment/{depId}")

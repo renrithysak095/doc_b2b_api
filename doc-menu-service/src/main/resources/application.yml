@@ -7,3 +7,10 @@ spring:
     import: optional:configserver:http://localhost:8888
 server:
   port: 8081
+
+#  servlet:
+#    multipart:
+#      max-file-size: 50MB
+#      max-request-size: 100MB
+file:
+  uploadPath: src/main/resources/storage/
