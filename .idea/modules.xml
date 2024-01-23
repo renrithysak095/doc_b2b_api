@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth-service/b2b_doc_api.auth-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/auth-service/b2b_doc_api.auth-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/common-service/b2b_doc_api.common-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common-service/b2b_doc_api.common-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/config-server/b2b_doc_api.config-server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/config-server/b2b_doc_api.config-server.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/doc-menu-service/b2b_doc_api.doc-menu-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/doc-menu-service/b2b_doc_api.doc-menu-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka-server/b2b_doc_api.eureka-server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka-server/b2b_doc_api.eureka-server.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-service/b2b_doc_api.gateway-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-service/b2b_doc_api.gateway-service.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/help-service/b2b_doc_api.help-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/help-service/b2b_doc_api.help-service.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/b2b_doc_api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/b2b_doc_api.main.iml" />
     </modules>
   </component>
 </project>
