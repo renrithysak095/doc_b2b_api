@@ -63,6 +63,7 @@ public class SecurityConfig {
                                 "/api/v1/image/{userId}",
                                 "/api/v1/users",
                                 "/api/v1/users/{userId}",
+                                "/api/v1/users/approve/{userId}",
                                 "/api/v1/users/reset-password/{userId}",
                                 "auth-service/v3/api-docs/**",
                                 "auth-service/swagger-ui/**",

@@ -1,5 +1,6 @@
 package com.example.docmenuservice.service.interfaces;
 
+import com.example.docmenuservice.model.dto.DepartmentDto;
 import com.example.docmenuservice.model.entity.Department;
 import com.example.docmenuservice.model.request.DepartmentRequest;
 
@@ -7,13 +8,13 @@ import java.util.List;
 
 public interface DepartmentService {
 
-    List<Department> getAllDepartment();
+    List<DepartmentDto> getAllDepartment();
 
-    Department getDepartmentById(Long id);
+    DepartmentDto getDepartmentById(Long id);
 
-    Department addDepartment(DepartmentRequest departmentRequest);
+    DepartmentDto addDepartment(DepartmentRequest departmentRequest);
 
-    Department updateDepartment(Long depId, DepartmentRequest departmentRequest);
+    DepartmentDto updateDepartment( DepartmentRequest departmentRequest, Long id);
 
-    Department deleteDepartment(Long depId);
+    void deleteDepartment(Long depId);
 }

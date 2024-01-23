@@ -1,4 +1,5 @@
 package com.example.docmenuservice.model.entity;
+import com.example.docmenuservice.model.dto.ContentDto;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -7,15 +8,20 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "contents")
+@Table(name = "contents", schema = "public")
 public class Content {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(columnDefinition = "TEXT")
-    private String content;
+    Long id;
+    String content;
 
-    @ManyToOne
-    @JoinColumn(name = "sub_title_id")
+    @OneToOne
+    @JoinColumn(name = "subTitle_Id")
     private SubTitle subTitle;
+
+    public ContentDto toDto(){
+        return new ContentDto(this.id,this.content);
+    }
+
+
 }

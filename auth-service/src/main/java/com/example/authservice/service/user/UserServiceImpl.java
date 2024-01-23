@@ -18,7 +18,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
     private final AuthRepository authRepository;
     private final PasswordEncoder passwordEncoder;
 
@@ -82,6 +82,13 @@ public class UserServiceImpl implements UserService{
             }
         }
         throw new IllegalArgumentException(ValidationConfig.INCORRECT_PW);
+    }
+
+    @Override
+    public AuthResponse approveUserById(Long userId) {
+        Auth auth = findUserById(userId);
+        auth.setStatus(true);
+        return authRepository.save(auth).toDto();
     }
 
     public Auth findUserById(Long userId){

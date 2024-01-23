@@ -20,9 +20,19 @@ public class GatewayServiceApplication {
         return builder
                 .routes()
                 .route(r -> r.path("/gateway-service/v3/api-docs").uri("lb://gateway-service"))
+
                 .route(r -> r.path("/doc-service/v3/api-docs").uri("lb://doc-service"))
+                .route(r -> r.path("/api/v1/docs/**").uri("lb://doc-service"))
+
                 .route(r -> r.path("/auth-service/v3/api-docs").uri("lb://auth-service"))
+                .route(r -> r.path("/api/v1/users/**").uri("lb://auth-service"))
+                .route(r -> r.path("/api/v1/auth/**").uri("lb://auth-service"))
+                .route(r -> r.path("/api/v1/image/**").uri("lb://auth-service"))
+
                 .route(r -> r.path("/help-service/v3/api-docs").uri("lb://help-service"))
+                .route(r -> r.path("/api/v1/questions/**").uri("lb://help-service"))
+                .route(r -> r.path("/api/v1/answers/**").uri("lb://help-service"))
+
                 .build();
     }
 }
