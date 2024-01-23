@@ -5,70 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7211d0cb-e8be-40c1-95e7-9402668d61d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/config/FileUploadProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/controller/MainTitleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/controller/SubTitleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/dto/ContentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/dto/DepartmentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/dto/FileUploadDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/dto/MainTitleDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/dto/SubTitleDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/entity/FileUpload.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/request/ContentRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/request/FileUploadRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/request/MainTitleRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/request/SubTitleRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/repository/ContentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/repository/FileUploadRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/repository/MainTitleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/repository/SubTitleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/interfaces/ContentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/interfaces/FileUploadService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/interfaces/MainTitleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/interfaces/SubTitleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/serverImpl/ContentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/serverImpl/FileUploadServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/serverImpl/MainTitleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/serverImpl/SubTitleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/storage/2ad2f715-a543-47f0-856d-1faecbe515b4image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/storage/3a17623e-6c08-43d5-b1b7-4075b9e4bc67image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/storage/3f1591e3-83fa-40f9-a59a-e16cbdeeca30image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/storage/57581af2-8e7b-48b4-afc8-f9866ded90a2image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/storage/670a5255-4920-4b9a-89a2-ca540bcb7765image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc-menu-service/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/build/resources/main/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc-menu-service/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/controller/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/controller/DepartmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/entity/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/entity/Content.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/entity/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/entity/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/entity/MainTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/entity/MainTitle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/entity/SubTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/entity/SubTitle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/request/DepartmentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/model/request/DepartmentRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/repository/DepartmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/repository/DepartmentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/interfaces/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/interfaces/DepartmentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/serverImpl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/serverImpl/DepartmentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc-menu-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-title-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-title-service/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-title-service/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-title-service/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-title-service/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-title-service/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-title-service/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-title-service/src/main/java/org/example/maintitleservice/MainTitleServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-title-service/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-title-service/src/test/java/org/example/maintitleservice/MainTitleServiceApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -413,7 +357,8 @@
       <workItem from="1705540066172" duration="5643000" />
       <workItem from="1705625577965" duration="3452000" />
       <workItem from="1705645246323" duration="2460000" />
-      <workItem from="1705885672274" duration="26432000" />
+      <workItem from="1705885672274" duration="29150000" />
+      <workItem from="1705971118703" duration="3289000" />
     </task>
     <servers />
   </component>

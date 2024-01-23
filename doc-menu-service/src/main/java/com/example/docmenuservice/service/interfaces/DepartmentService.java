@@ -10,11 +10,11 @@ public interface DepartmentService {
 
     List<DepartmentDto> getAllDepartment();
 
-    Department getDepartmentById(Long id);
+    DepartmentDto getDepartmentById(Long id);
 
     DepartmentDto addDepartment(DepartmentRequest departmentRequest);
 
-    Department updateDepartment(Long depId, DepartmentRequest departmentRequest);
+    DepartmentDto updateDepartment( DepartmentRequest departmentRequest, Long id);
 
-    Department deleteDepartment(Long depId);
+    void deleteDepartment(Long depId);
 }
