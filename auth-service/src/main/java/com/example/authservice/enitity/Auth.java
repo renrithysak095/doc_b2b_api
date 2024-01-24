@@ -36,8 +36,8 @@ public class Auth implements UserDetails {
     @Column(nullable = false)
     private LocalDateTime last_md;
 
-    public AuthResponse toDto(){
-        return new AuthResponse(id,username,url,deptId,role,image,cred_dt);
+    public AuthResponse toDto(String department){
+        return new AuthResponse(id,username,url,department,role,image,cred_dt);
     }
     public UserResponse toResponse(String token){
         return new UserResponse(id,username,token,deptId,role,image,provider,cred_dt,last_md);

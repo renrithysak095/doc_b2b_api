@@ -1,4 +1,5 @@
 package com.example.authservice.service.auth;
+
 import com.example.authservice.config.jwt.JwtTokenUtils;
 import com.example.authservice.enitity.Auth;
 import com.example.authservice.enumeration.Provider;
@@ -52,8 +53,9 @@ public class AuthServiceImpl implements AuthService {
         validRole(request.getRole());
         validateDepartment(request.getDeptId());
         validateProvider(request.getProvider());
+        validateUser(request.getUsername(),request.getProvider());
         request.setPassword(passwordEncoder.encode(request.getPassword()));
-        return authRepository.save(request.toEntity(LocalDateTime.now(),LocalDateTime.now(), baseURL  + passwordEncoder.encode(request.getUsername()) + UUID.randomUUID())).toDto();
+        return authRepository.save(request.toEntity(LocalDateTime.now(),LocalDateTime.now(), baseURL  + passwordEncoder.encode(request.getUsername()) + UUID.randomUUID())).toDto(validateDepartment(request.getDeptId()));
     }
 
     @Override
@@ -71,6 +73,29 @@ public class AuthServiceImpl implements AuthService {
         }catch (Exception e){
             throw new NotFoundExceptionClass(ValidationConfig.NOTFOUND_USER);
         }
+    }
+
+    @Override
+    public AuthResponse temporary(AuthRequest request) {
+        validRole(request.getRole());
+        validateDepartment(request.getDeptId());
+        validateProvider(request.getProvider());
+        for (Provider enumProvider : Provider.values()) {
+            if (enumProvider.name().equalsIgnoreCase(request.getProvider().toUpperCase()) && !(request.getProvider().equalsIgnoreCase(Provider.CREDENTIALS.name()))) {
+                Auth auth = authRepository.getByUsernameAndProvider(request.getUsername(),request.getProvider().toUpperCase());
+                if(auth != null){
+                    if(auth.getUsername().equalsIgnoreCase(request.getUsername())){
+                        if(auth.getProvider().equalsIgnoreCase(request.getProvider())){
+                            auth.setPassword(passwordEncoder.encode(request.getPassword()));
+                            auth.setUrl(baseURL  + passwordEncoder.encode(request.getUsername()) + UUID.randomUUID());
+                            return authRepository.save(auth).toDto(validateDepartment(request.getDeptId()));
+                        }
+                    }
+                }
+                return authRepository.save(request.toEntity(LocalDateTime.now(),LocalDateTime.now(), baseURL  + passwordEncoder.encode(request.getUsername()) + UUID.randomUUID())).toDto(validateDepartment(request.getDeptId()));
+            }
+        }
+        throw new IllegalArgumentException(ValidationConfig.NOT_FOUND_PROVIDER);
     }
 
     // Validate role
@@ -93,19 +118,27 @@ public class AuthServiceImpl implements AuthService {
         throw new IllegalArgumentException(ValidationConfig.NOT_FOUND_PROVIDER);
     }
 
+    // Validate is existing User
+    public void validateUser(String username, String provider){
+        Auth auth = authRepository.getByUsernameAndProvider(username, provider.toUpperCase());
+        if(auth != null){
+            throw new IllegalArgumentException(ValidationConfig.EXISTING_USERNAME);
+        }
+    }
+
     // Validate is existing Department
-    public void validateDepartment(Long deptId){
+    public String validateDepartment(Long deptId){
         ObjectMapper covertSpecificClass = new ObjectMapper();
         covertSpecificClass.registerModule(new JavaTimeModule());
         try{
-            covertSpecificClass.convertValue(Objects.requireNonNull(authClient
+            return covertSpecificClass.convertValue(Objects.requireNonNull(authClient
                     .baseUrl(baseURL)
                     .build()
                     .get()
-                    .uri("api/v1/docs/getDepartment/{id}", deptId)
+                    .uri("api/v1/departments/{id}", deptId)
                     .retrieve()
                     .bodyToMono(ApiResponse.class)
-                    .block()), DepartmentDto.class);
+                    .block()).getPayload(), DepartmentDto.class).getName();
         }catch (Exception e){
             throw new NotFoundExceptionClass(ValidationConfig.NOT_FOUND_DEPT);
         }

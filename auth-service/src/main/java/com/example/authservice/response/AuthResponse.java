@@ -13,7 +13,7 @@ public class AuthResponse {
     private Long id;
     private String username;
     private String url;
-    private Long deptId;
+    private String department;
     private String role;
     private String image;
     private LocalDateTime cred_dt;

@@ -35,6 +35,16 @@ public class UserController {
         ), HttpStatus.OK);
     }
 
+    @GetMapping("/requests")
+    @Operation(summary = "list external request")
+    public ResponseEntity<ApiResponse<List<AuthResponse>>> externalUserList(){
+        return new ResponseEntity<>(new ApiResponse<>(
+                "fetched all external requests successfully",
+                userService.getAllExternalRequest(),
+                LocalDateTime.now()
+        ), HttpStatus.OK);
+    }
+
     @GetMapping("/{userId}")
     @Operation(summary = "get user by id")
     public ResponseEntity<ApiResponse<AuthResponse>> getUserById(@PathVariable Long userId){

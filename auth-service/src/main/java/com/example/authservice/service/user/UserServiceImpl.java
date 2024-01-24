@@ -8,12 +8,18 @@ import com.example.authservice.request.AuthRequest;
 import com.example.authservice.request.ResetPassword;
 import com.example.authservice.response.AuthResponse;
 import com.example.commonservice.config.ValidationConfig;
+import com.example.commonservice.response.ApiResponse;
+import com.example.commonservice.response.DepartmentDto;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
@@ -21,17 +27,19 @@ import java.util.stream.Collectors;
 public class UserServiceImpl implements UserService {
     private final AuthRepository authRepository;
     private final PasswordEncoder passwordEncoder;
+    private final WebClient.Builder authClient;
 
     @Value("${baseURL}")
     private String baseURL;
 
-    public UserServiceImpl(AuthRepository authRepository, PasswordEncoder passwordEncoder) {
+    public UserServiceImpl(AuthRepository authRepository, PasswordEncoder passwordEncoder, WebClient.Builder authClient) {
         this.authRepository = authRepository;
         this.passwordEncoder = passwordEncoder;
+        this.authClient = authClient;
     }
     @Override
     public List<AuthResponse> getAllUsers() {
-        List<AuthResponse> users = authRepository.findAll().stream().map(Auth::toDto)
+        List<AuthResponse> users = authRepository.findAll().stream().map(m -> m.toDto(validateDepartment(m.getDeptId())))
                 .collect(Collectors.toList());
         if(!users.isEmpty()){
             return users;
@@ -41,7 +49,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public AuthResponse getUserById(Long userId) {
-        return findUserById(userId).toDto();
+        return findUserById(userId).toDto(validateDepartment(findUserById(userId).getDeptId()));
     }
 
     @Override
@@ -67,7 +75,7 @@ public class UserServiceImpl implements UserService {
         auth.setDeptId(request.getDeptId());
         auth.setUsername(request.getUsername());
         auth.setLast_md(LocalDateTime.now());
-        return authRepository.save(auth).toDto();
+        return authRepository.save(auth).toDto(validateDepartment(auth.getDeptId()));
     }
 
     @Override
@@ -88,7 +96,17 @@ public class UserServiceImpl implements UserService {
     public AuthResponse approveUserById(Long userId) {
         Auth auth = findUserById(userId);
         auth.setStatus(true);
-        return authRepository.save(auth).toDto();
+        return authRepository.save(auth).toDto(validateDepartment(auth.getDeptId()));
+    }
+
+    @Override
+    public List<AuthResponse> getAllExternalRequest() {
+        List<AuthResponse> users = authRepository.findAllByStatus(false).stream().map(m -> m.toDto(validateDepartment(m.getDeptId())))
+                .collect(Collectors.toList());
+        if(!users.isEmpty()){
+            return users;
+        }
+        throw new NotFoundExceptionClass(ValidationConfig.EMPTY_USER);
     }
 
     public Auth findUserById(Long userId){
@@ -104,6 +122,24 @@ public class UserServiceImpl implements UserService {
             }
         }
         throw new IllegalArgumentException(ValidationConfig.NOT_FOUND_ROLE);
+    }
+
+    // Validate is existing Department
+    public String validateDepartment(Long deptId){
+        ObjectMapper covertSpecificClass = new ObjectMapper();
+        covertSpecificClass.registerModule(new JavaTimeModule());
+        try{
+            return covertSpecificClass.convertValue(Objects.requireNonNull(authClient
+                    .baseUrl(baseURL)
+                    .build()
+                    .get()
+                    .uri("api/v1/departments/{id}", deptId)
+                    .retrieve()
+                    .bodyToMono(ApiResponse.class)
+                    .block()).getPayload(), DepartmentDto.class).getName();
+        }catch (Exception e){
+            throw new NotFoundExceptionClass(ValidationConfig.NOT_FOUND_DEPT);
+        }
     }
 
 }
