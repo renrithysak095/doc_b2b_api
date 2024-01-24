@@ -56,10 +56,20 @@ public class UserController {
         ), HttpStatus.OK);
     }
 
+    @PutMapping("/approve/{userId}")
+    @Operation(summary = "approve user")
+    public ResponseEntity<ApiResponse<AuthResponse>> approveUserById(@PathVariable Long userId){
+        return new ResponseEntity<>(new ApiResponse<>(
+                "user had approved successfully",
+                userService.approveUserById(userId),
+                LocalDateTime.now()
+        ), HttpStatus.OK);
+    }
+
     @PutMapping("/reset-password/{userId}")
     @Operation(summary = "reset password")
     public ResponseEntity<ApiResponse<Void>> resetPassword(@PathVariable Long userId,
-                                                                   @RequestBody @Valid ResetPassword request){
+                                                           @RequestBody @Valid ResetPassword request){
         return new ResponseEntity<>(new ApiResponse<>(
                 "password changed successfully",
                 userService.resetPassword(userId,request),

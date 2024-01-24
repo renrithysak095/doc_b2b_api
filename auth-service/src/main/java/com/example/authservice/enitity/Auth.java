@@ -29,6 +29,7 @@ public class Auth implements UserDetails {
     private Long deptId;
     private String role;
     private String image;
+    private String provider;
     private Boolean status;
     @Column(nullable = false)
     private LocalDateTime cred_dt;
@@ -39,7 +40,7 @@ public class Auth implements UserDetails {
         return new AuthResponse(id,username,url,deptId,role,image,cred_dt);
     }
     public UserResponse toResponse(String token){
-        return new UserResponse(id,username,token,deptId,role,image,cred_dt,last_md);
+        return new UserResponse(id,username,token,deptId,role,image,provider,cred_dt,last_md);
     }
 
     @Override

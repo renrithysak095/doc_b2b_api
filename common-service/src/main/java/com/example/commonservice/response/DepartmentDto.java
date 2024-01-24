@@ -1,4 +1,4 @@
-package com.example.docmenuservice.model.dto;
+package com.example.commonservice.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

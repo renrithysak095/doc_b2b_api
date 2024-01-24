@@ -12,10 +12,9 @@ import java.io.IOException;
 import java.util.List;
 
 public interface MainTitleService {
-
     MainTitleDto addNewMainTitle(MainTitleRequest mainTitleRequest);
     List<MainTitleDto> geAllMainTitle();
-    void deleteMainTitleById(Long id);
+    Void deleteMainTitleById(Long id);
 
     MainTitleDto updateMainTitleById(MainTitleRequest mainTitleRequest, Long id);
 
@@ -24,7 +23,7 @@ public interface MainTitleService {
     SubTitleDto addNewSubTitleTOMainTitle(SubTitleRequest subTitleRequest, Long id);
     SubTitleDto updateSubTitleInMainTitleId(SubTitleRequest subTitleRequest, Long id);
 
-    void deleteSubTitleFromMainTitleById( Long sub_Id);
+    Void deleteSubTitleFromMainTitleById( Long sub_Id);
 
     List<SubTitleDto> getAllSubTitleByMainTitleId(Long id);
 
@@ -33,7 +32,7 @@ public interface MainTitleService {
 
     List<FileUploadRequest>saveMultipleFile(List<MultipartFile> files,HttpServletRequest request,Long id) throws IOException;
 
-    void deleteFileUploadsByMainTitleId( Long file_id);
+    Void deleteFileUploadsByMainTitleId( Long file_id);
 
     byte[] getFileContent(String fileName) throws IOException;
 

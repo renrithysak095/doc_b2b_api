@@ -66,9 +66,10 @@ public class MainTitleServiceImpl implements MainTitleService {
     }
 
     @Override
-    public void deleteMainTitleById(Long id) {
+    public Void deleteMainTitleById(Long id) {
         MainTitle mainTitle= mainTitleRepository.findById(id).orElseThrow(()->new NotFoundExceptionClass("Id Not found"));
         mainTitleRepository.deleteById(mainTitle.getId());
+        return null;
     }
 
     @Override
@@ -129,10 +130,10 @@ public class MainTitleServiceImpl implements MainTitleService {
     }
 
     @Override
-    public void deleteSubTitleFromMainTitleById(Long sub_Id) {
+    public Void deleteSubTitleFromMainTitleById(Long sub_Id) {
         SubTitle subTitle= subTitleRepository.findById(sub_Id).orElseThrow(()->new NotFoundExceptionClass("account_Id not found"));
         subTitleRepository.deleteById(subTitle.getId());
-
+        return null;
     }
 
     @Override
@@ -207,9 +208,10 @@ public class MainTitleServiceImpl implements MainTitleService {
 
 
     @Override
-    public void deleteFileUploadsByMainTitleId( Long file_id) {
+    public Void deleteFileUploadsByMainTitleId( Long file_id) {
         FileUpload fileUpload= fileUploadRepository.findById(file_id).orElseThrow(()->new NotFoundExceptionClass("File Not Found"));
         fileUploadRepository.deleteById(fileUpload.getId());
+        return null;
     }
 
     @Override

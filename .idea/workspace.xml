@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7211d0cb-e8be-40c1-95e7-9402668d61d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.bin" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/controller/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/controller/DepartmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/interfaces/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/interfaces/DepartmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/serverImpl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/serverImpl/DepartmentServiceImpl.java" afterDir="false" />
+>>>>>>> cb6959d2dcf6a11ade0ee61ee080c4ea19364908
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +89,11 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Gradle.Build b2b_doc_api.executor&quot;: &quot;Run&quot;,
+<<<<<<< HEAD
+=======
     &quot;Gradle.Build doc_b2b_api.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Build main-title-service.executor&quot;: &quot;Run&quot;,
+>>>>>>> cb6959d2dcf6a11ade0ee61ee080c4ea19364908
     &quot;Gradle.Tests in 'b2b_doc_api.config-server'.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Tests in 'b2b_doc_api.eureka-server'.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.b2b_doc_api [build].executor&quot;: &quot;Run&quot;,
@@ -108,12 +115,20 @@
     &quot;Spring Boot.EurekaServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.HelpServiceApplication (1).executor&quot;: &quot;Run&quot;,
+<<<<<<< HEAD
+    &quot;Spring Boot.HelpServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UploadServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sak&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ksg-usr/Desktop/B2B_DOC_API/b2b_doc_api/upload-service/src/main/java/com/example/helpservice/service&quot;,
+=======
     &quot;Spring Boot.MainTitleServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.UploadServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;moniroth14&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Khawm/OneDrive/Desktop/doc_b2b_api/main-title-service/src/main/java/org/example/maintitleservice/model&quot;,
+>>>>>>> cb6959d2dcf6a11ade0ee61ee080c4ea19364908
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -124,7 +139,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
     &quot;service.view.auto.scroll.from.source&quot;: &quot;true&quot;,
+<<<<<<< HEAD
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+=======
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+>>>>>>> cb6959d2dcf6a11ade0ee61ee080c4ea19364908
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -208,6 +227,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
+=======
     <configuration name="B2bDocApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="b2b_doc_api.main" />
@@ -226,11 +247,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+>>>>>>> cb6959d2dcf6a11ade0ee61ee080c4ea19364908
     <configuration name="ConfigServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="b2b_doc_api.config-server.main" />
       <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.configservice.ConfigServiceApplication" />
+<<<<<<< HEAD
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.configservice.*" />
+=======
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.configservice.*" />
@@ -291,6 +318,7 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.maintitleservice.*" />
+>>>>>>> cb6959d2dcf6a11ade0ee61ee080c4ea19364908
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -307,6 +335,15 @@
     <list>
       <item itemvalue="Application.ConfigServiceApplication" />
       <item itemvalue="Gradle.Tests in 'b2b_doc_api.eureka-server'" />
+<<<<<<< HEAD
+      <item itemvalue="Spring Boot.ConfigServiceApplication" />
+      <item itemvalue="Spring Boot.AuthServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.AuthServiceApplication" />
+        <item itemvalue="Spring Boot.ConfigServiceApplication" />
+=======
       <item itemvalue="Spring Boot.AuthServiceApplication" />
       <item itemvalue="Spring Boot.B2bDocApiApplication" />
       <item itemvalue="Spring Boot.CommonServiceApplication" />
@@ -322,6 +359,7 @@
         <item itemvalue="Spring Boot.DocMenuServiceApplication" />
         <item itemvalue="Spring Boot.ConfigServiceApplication" />
         <item itemvalue="Spring Boot.MainTitleServiceApplication" />
+>>>>>>> cb6959d2dcf6a11ade0ee61ee080c4ea19364908
         <item itemvalue="Gradle.Tests in 'b2b_doc_api.eureka-server'" />
         <item itemvalue="Application.ConfigServiceApplication" />
       </list>
@@ -355,11 +393,15 @@
       <workItem from="1705464611027" duration="8803000" />
       <workItem from="1705478374894" duration="4203000" />
       <workItem from="1705540066172" duration="5643000" />
+<<<<<<< HEAD
+      <workItem from="1705885734250" duration="11983000" />
+      <workItem from="1705971567880" duration="1666000" />
+=======
       <workItem from="1705625577965" duration="3452000" />
       <workItem from="1705645246323" duration="2460000" />
       <workItem from="1705885672274" duration="29150000" />
-      <workItem from="1705971118703" duration="6087000" />
-      <workItem from="1706080488863" duration="747000" />
+      <workItem from="1705971118703" duration="3289000" />
+>>>>>>> cb6959d2dcf6a11ade0ee61ee080c4ea19364908
     </task>
     <servers />
   </component>
@@ -406,17 +448,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/controller/DepartmentController.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

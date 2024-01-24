@@ -1,6 +1,7 @@
 package com.example.authservice.service.auth;
 import com.example.authservice.config.jwt.JwtTokenUtils;
 import com.example.authservice.enitity.Auth;
+import com.example.authservice.enumeration.Provider;
 import com.example.authservice.enumeration.Role;
 import com.example.authservice.exception.NotFoundExceptionClass;
 import com.example.authservice.repository.AuthRepository;
@@ -9,7 +10,8 @@ import com.example.authservice.request.UserRequest;
 import com.example.authservice.response.AuthResponse;
 import com.example.authservice.response.UserResponse;
 import com.example.commonservice.config.ValidationConfig;
-import com.example.commonservice.model.Department;
+import com.example.commonservice.response.ApiResponse;
+import com.example.commonservice.response.DepartmentDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import lombok.extern.slf4j.Slf4j;
@@ -48,9 +50,10 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public AuthResponse register(AuthRequest request) {
         validRole(request.getRole());
-//        validateDepartment(request.getDeptId());
+        validateDepartment(request.getDeptId());
+        validateProvider(request.getProvider());
         request.setPassword(passwordEncoder.encode(request.getPassword()));
-        return authRepository.save(request.toEntity(LocalDateTime.now(),LocalDateTime.now(), baseURL + "/" + passwordEncoder.encode(request.getUsername()) + UUID.randomUUID())).toDto();
+        return authRepository.save(request.toEntity(LocalDateTime.now(),LocalDateTime.now(), baseURL  + passwordEncoder.encode(request.getUsername()) + UUID.randomUUID())).toDto();
     }
 
     @Override
@@ -73,11 +76,21 @@ public class AuthServiceImpl implements AuthService {
     // Validate role
     public void validRole(String role){
         for (Role enumRole : Role.values()) {
-            if (enumRole.name().equals(role)) {
+            if (enumRole.name().equals(role.toUpperCase())) {
                 return;
             }
         }
         throw new IllegalArgumentException(ValidationConfig.NOT_FOUND_ROLE);
+    }
+
+    // Validate Provider
+    public void validateProvider(String provider){
+        for (Provider enumProvider : Provider.values()) {
+            if (enumProvider.name().equals(provider.toUpperCase())) {
+                return;
+            }
+        }
+        throw new IllegalArgumentException(ValidationConfig.NOT_FOUND_PROVIDER);
     }
 
     // Validate is existing Department
@@ -91,8 +104,8 @@ public class AuthServiceImpl implements AuthService {
                     .get()
                     .uri("api/v1/docs/getDepartment/{id}", deptId)
                     .retrieve()
-                    .bodyToMono(String.class)
-                    .block()), Department.class);
+                    .bodyToMono(ApiResponse.class)
+                    .block()), DepartmentDto.class);
         }catch (Exception e){
             throw new NotFoundExceptionClass(ValidationConfig.NOT_FOUND_DEPT);
         }

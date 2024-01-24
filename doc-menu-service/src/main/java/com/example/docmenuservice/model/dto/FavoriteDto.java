@@ -10,8 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class DepartmentDto {
+public class FavoriteDto {
     private Long id;
-    private String name;
-    private List<MainTitleDto> mainTitles = new ArrayList<>();
+    private List<SubTitleDto> subTitles = new ArrayList<>();
 }
