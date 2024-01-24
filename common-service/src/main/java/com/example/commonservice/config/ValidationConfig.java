@@ -5,6 +5,8 @@ import org.springframework.context.annotation.Configuration;
 public class ValidationConfig {
 
     public static final String USER_REQUIRED_MESSAGE = "username is required";
+    public static final String PROVIDER_REQUIRED_MESSAGE = "provider is required";
+    public static final String PROVIDER_RESPONSE_MESSAGE = "provider cannot be empty";
     public static final String TAG_NOT_EMPTY = "tag cannot be empty";
     public static final String POST_TITLE_EMPTY = "title cannot be empty";
     public static final String NOT_FOUND_QUESTION = "question is not found";
@@ -14,6 +16,7 @@ public class ValidationConfig {
     public static final String DEPT_REQUIRED = "department id is required";
     public static final String DEPT_EMPTY = "department id cannot be empty";
     public static final String NOT_FOUND_ROLE = "role is out of scope ('VIEWER', 'MANAGER','ADMIN')";
+    public static final String NOT_FOUND_PROVIDER = "provider is out of scope ('CREDENTIALS', 'GOOGLE','GITHUB')";
     public static final String INVALID_CREDENTIALS = "username or password incorrect";
     public static final String USER_RESPONSE_MESSAGE = "username must be between 3 and 25 characters";
     public static final int USER_VALIDATION_MIN = 3;

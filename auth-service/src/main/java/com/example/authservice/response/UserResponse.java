@@ -17,6 +17,7 @@ public class UserResponse {
     private Long deptId;
     private String role;
     private String image;
+    private String provider;
     private LocalDateTime cred_dt;
     private LocalDateTime last_md;
 }
