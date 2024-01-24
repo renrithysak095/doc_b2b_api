@@ -1,17 +1,21 @@
 package com.example.docmenuservice.controller;
 
+import com.example.commonservice.response.ApiResponse;
 import com.example.docmenuservice.model.dto.ContentDto;
 import com.example.docmenuservice.model.request.ContentRequest;
-import com.example.docmenuservice.model.response.ResponseBody;
 import com.example.docmenuservice.service.interfaces.SubTitleService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 
 @RestController
-@RequestMapping("api/v1/docs")
-@Tag(name = "SubTitle- Service")
+@RequestMapping("api/v1/contents")
+@Tag(name = "Content - Service")
 public class SubTitleController {
 
     private final SubTitleService subTitleService;
@@ -20,33 +24,34 @@ public class SubTitleController {
         this.subTitleService = subTitleService;
     }
 
-    @PostMapping("/{id}/content/")
-    public ResponseBody<ContentDto> addNewContentToSubtitle(@PathVariable Long id, @RequestBody ContentRequest contentRequest){
-        var payload= subTitleService.addNewContentToSubtitle(contentRequest,id);
-        return ResponseBody.<ContentDto>builder()
-                .status(200)
-                .payload(payload)
-                .time(LocalDateTime.now())
-                .build();
+    @PostMapping("/{id}")
+    @Operation(summary = "added content to sub-title by id")
+    public ResponseEntity<ApiResponse<ContentDto>> addNewContentToSubtitle(@PathVariable Long id,
+                                                                           @RequestBody ContentRequest contentRequest){
+        return new ResponseEntity<>(new ApiResponse<>(
+                "added content to sub-title successfully",
+                subTitleService.addNewContentToSubtitle(contentRequest,id),
+                LocalDateTime.now()
+        ), HttpStatus.CREATED);
     }
 
-    @PutMapping("/{content_Id}/content")
-    public ResponseBody<ContentDto> updateContentInSubtitle( @PathVariable("content_Id") Long content_Id, ContentRequest contentRequest){
-        var payload= subTitleService.updateContentInSubtitle(contentRequest,content_Id);
-        return ResponseBody.<ContentDto>builder()
-                .status(200)
-                .payload(payload)
-                .time(LocalDateTime.now())
-                .build();
+    @PutMapping("/{id}")
+    @Operation(summary = "updated content by sub-title's id")
+    public ResponseEntity<ApiResponse<ContentDto>> updateContentInSubtitle( @PathVariable Long id,
+                                                                            @RequestBody @Valid ContentRequest contentRequest){
+        return new ResponseEntity<>(new ApiResponse<>(
+                "updated content by sub-title's id successfully",
+                subTitleService.updateContentInSubtitle(contentRequest,id),
+                LocalDateTime.now()
+        ), HttpStatus.OK);
     }
 
-    @GetMapping("/{content_Id}/content")
-    public ResponseBody<ContentDto> getContentById(@PathVariable("content_Id") Long content_Id){
-        var payload= subTitleService.getContentById(content_Id);
-        return ResponseBody.<ContentDto>builder()
-                .status(200)
-                .payload(payload)
-                .time(LocalDateTime.now())
-                .build();
+    @GetMapping("/{contentId}")
+    public ResponseEntity<ApiResponse<ContentDto>> getContentById(@PathVariable Long contentId){
+        return new ResponseEntity<>(new ApiResponse<>(
+                "get content by id successfully",
+                subTitleService.getContentById(contentId),
+                LocalDateTime.now()
+        ), HttpStatus.OK);
     }
 }

@@ -10,18 +10,15 @@ import com.example.authservice.request.UserRequest;
 import com.example.authservice.response.AuthResponse;
 import com.example.authservice.response.UserResponse;
 import com.example.commonservice.config.ValidationConfig;
-import com.example.commonservice.model.Department;
 import com.example.commonservice.response.ApiResponse;
 import com.example.commonservice.response.DepartmentDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import java.time.LocalDateTime;
