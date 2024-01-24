@@ -50,7 +50,7 @@ public class FavoriteController {
     public ResponseEntity<ApiResponse<Object>> removeFavorite(@PathVariable Long id) {
         favoriteService.removeFavorite(id);
         ApiResponse<Object> apiResponse = ApiResponse.builder()
-                .message("Get favorite by user successfully")
+                .message("Remove successfully")
                 .payload(null)
                 .date(LocalDateTime.now())
                 .status(200)
