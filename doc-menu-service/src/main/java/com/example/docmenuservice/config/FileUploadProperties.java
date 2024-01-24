@@ -9,10 +9,8 @@ public class FileUploadProperties {
     public String getUploadPath() {
         return uploadPath;
     }
-
     public void setUploadPath(String uploadPath) {
         this.uploadPath = uploadPath;
     }
-
     private String uploadPath;
 }

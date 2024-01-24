@@ -1,10 +1,12 @@
 package com.example.docmenuservice.controller;
 
+import com.example.commonservice.response.ApiResponse;
 import com.example.docmenuservice.model.entity.Favorite;
 import com.example.docmenuservice.model.request.FavoriteRequest;
-import com.example.docmenuservice.model.response.ApiResponse;
 import com.example.docmenuservice.service.interfaces.FavoriteService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +14,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1/docs")
+@RequestMapping("api/v1/favorites")
 @Tag(name = "Favorite - Service")
 @CrossOrigin
 public class FavoriteController {
@@ -22,40 +24,32 @@ public class FavoriteController {
         this.favoriteService = favoriteService;
     }
 
-    @PostMapping("/addFavorite")
-    public ResponseEntity<?> addNewFavorite(@RequestBody FavoriteRequest favoriteRequest) {
-        Favorite favorite = favoriteService.addNewFavorite(favoriteRequest);
-        ApiResponse<Object> apiResponse = ApiResponse.builder()
-                .message("Favorite added successfully")
-                .payload(favorite)
-                .date(LocalDateTime.now())
-                .status(200)
-                .build();
-        return ResponseEntity.ok(apiResponse);
+    @PostMapping
+    public ResponseEntity<ApiResponse<Favorite>> addNewFavorite(@RequestBody FavoriteRequest favoriteRequest) {
+        return new ResponseEntity<>(new ApiResponse<>(
+                "favorite added successfully",
+                favoriteService.addNewFavorite(favoriteRequest),
+                LocalDateTime.now()
+        ), HttpStatus.OK);
     }
 
-    @GetMapping("/getFavorites/{userId}")
-    public ResponseEntity<?> getFavorites(@PathVariable Long userId) {
-        List<Favorite> favorite = favoriteService.getFavorites(userId);
-        ApiResponse<Object> apiResponse = ApiResponse.builder()
-                .message("Get favorite by user successfully")
-                .payload(favorite)
-                .date(LocalDateTime.now())
-                .status(200)
-                .build();
-        return ResponseEntity.ok(apiResponse);
+    @GetMapping("/{userId}")
+    public ResponseEntity<ApiResponse<List<Favorite>>> getFavorites(@PathVariable Long userId) {
+        return new ResponseEntity<>(new ApiResponse<>(
+                "get favorite by user id successfully",
+                favoriteService.getFavorites(userId),
+                LocalDateTime.now()
+        ), HttpStatus.OK);
     }
 
-    @DeleteMapping("/removeFavorite/{id}")
-    public ResponseEntity<ApiResponse<Object>> removeFavorite(@PathVariable Long id) {
-        favoriteService.removeFavorite(id);
-        ApiResponse<Object> apiResponse = ApiResponse.builder()
-                .message("Remove successfully")
-                .payload(null)
-                .date(LocalDateTime.now())
-                .status(200)
-                .build();
-        return ResponseEntity.ok(apiResponse);
+    @DeleteMapping("/{id}")
+    @Operation(summary = "delete favorite")
+    public ResponseEntity<ApiResponse<Void>> removeFavorite(@PathVariable Long id){
+        return new ResponseEntity<>(new ApiResponse<>(
+                "remove department by successfully",
+                favoriteService.removeFavorite(id),
+                LocalDateTime.now()
+        ), HttpStatus.OK);
     }
 }
 

@@ -69,7 +69,7 @@ public class UserController {
     @PutMapping("/reset-password/{userId}")
     @Operation(summary = "reset password")
     public ResponseEntity<ApiResponse<Void>> resetPassword(@PathVariable Long userId,
-                                                                   @RequestBody @Valid ResetPassword request){
+                                                           @RequestBody @Valid ResetPassword request){
         return new ResponseEntity<>(new ApiResponse<>(
                 "password changed successfully",
                 userService.resetPassword(userId,request),

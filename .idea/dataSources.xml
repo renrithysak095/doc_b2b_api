@@ -37,7 +37,7 @@
       </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="b2bdoc@192.168.178.72" uuid="ffa3e36d-6736-4569-a523-45c149bfad5a">
+    <data-source source="LOCAL" name="postgres@192.168.178.72" uuid="ed8f05d7-6b24-471d-af79-7175f1bbae21">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

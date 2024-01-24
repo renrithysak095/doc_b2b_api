@@ -24,9 +24,12 @@ public class AuthRequest {
     @NotBlank(message = ValidationConfig.ROLE_REQUIRED_MESSAGE)
     @NotEmpty(message = ValidationConfig.ROLE_RESPONSE_MESSAGE)
     private String role;
+    @NotBlank(message = ValidationConfig.PROVIDER_REQUIRED_MESSAGE)
+    @NotEmpty(message = ValidationConfig.PROVIDER_RESPONSE_MESSAGE)
+    private String provider;
     private Boolean status;
     public Auth toEntity(LocalDateTime credDt, LocalDateTime lastMd, String url){
-        return new Auth(null,this.username.toLowerCase(),this.password,url,this.deptId,role.toUpperCase(),null,status,credDt,lastMd);
+        return new Auth(null,this.username.toLowerCase(),this.password,url,this.deptId,role.toUpperCase(),null,provider.toUpperCase(),status,credDt,lastMd);
     }
 
 }
