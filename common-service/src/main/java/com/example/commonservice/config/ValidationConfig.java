@@ -3,6 +3,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ValidationConfig {
+    public static final String NOT_FOUND_SUBTITLE = "Subtitle is not found";
+    public static final String NOT_FOUND_USER = "User is not found";
 
     public static final String USER_REQUIRED_MESSAGE = "username is required";
     public static final String PROVIDER_REQUIRED_MESSAGE = "provider is required";
