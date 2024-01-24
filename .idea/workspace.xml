@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7211d0cb-e8be-40c1-95e7-9402668d61d3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/controller/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/controller/DepartmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/interfaces/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/interfaces/DepartmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/serverImpl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/service/serverImpl/DepartmentServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -358,7 +358,8 @@
       <workItem from="1705625577965" duration="3452000" />
       <workItem from="1705645246323" duration="2460000" />
       <workItem from="1705885672274" duration="29150000" />
-      <workItem from="1705971118703" duration="3289000" />
+      <workItem from="1705971118703" duration="6087000" />
+      <workItem from="1706080488863" duration="747000" />
     </task>
     <servers />
   </component>
@@ -405,6 +406,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/doc-menu-service/src/main/java/com/example/docmenuservice/controller/DepartmentController.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
