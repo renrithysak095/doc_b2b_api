@@ -75,8 +75,6 @@ public class AuthController {
         ), HttpStatus.OK);
     }
 
-
-
     private void authenticate(String username, String password) throws Exception {
         try {
             authenticate.authenticate(new UsernamePasswordAuthenticationToken(username, password));

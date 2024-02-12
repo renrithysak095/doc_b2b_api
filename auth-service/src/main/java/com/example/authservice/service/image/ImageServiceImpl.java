@@ -25,7 +25,6 @@ public class ImageServiceImpl implements ImageService{
 
     private final FileStorageProperties fileStorageProperties;
     private final AuthRepository authRepository;
-
     private final ImageRepository imageRepository;
 
     public ImageServiceImpl(FileStorageProperties fileStorageProperties, AuthRepository authRepository, ImageRepository imageRepository) {

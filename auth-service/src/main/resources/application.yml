@@ -12,3 +12,4 @@ server:
   port: 8082
 jwt:
   secret: b2bDoc
+  refresh-token: 604800

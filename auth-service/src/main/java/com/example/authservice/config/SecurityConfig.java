@@ -3,6 +3,7 @@ package com.example.authservice.config;
 import com.example.authservice.config.jwt.JwtAuthEntryPoint;
 import com.example.authservice.config.jwt.JwtTokenFilter;
 import com.example.authservice.service.auth.AuthServiceImpl;
+import org.springframework.http.HttpMethod;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -48,31 +49,28 @@ public class SecurityConfig {
         return configuration.getAuthenticationManager();
     }
 
-
     @Bean
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.cors();
         http.csrf()
                 .disable()
-                .authorizeHttpRequests(request -> request
-                        .requestMatchers(
-                                "/api/v1/auth/login",
-                                "/api/v1/auth/url/login",
-                                "/api/v1/auth/register",
-                                "/api/v1/auth/temporary-credentials",
-                                "/api/v1/image",
-                                "/api/v1/image/{userId}",
-                                "/api/v1/users",
-                                "/api/v1/users/requests",
-                                "/api/v1/users/{userId}",
-                                "/api/v1/users/approve/{userId}",
-                                "/api/v1/users/reset-password/{userId}",
-                                "auth-service/v3/api-docs/**",
-                                "auth-service/swagger-ui/**",
-                                "auth-service/swagger-ui.html").permitAll()
-                        .requestMatchers("/api/v1/auth/register").hasRole("ADMIN")
-                        .anyRequest().authenticated()
-                )
+                .authorizeHttpRequests(request -> {
+                    request.requestMatchers("auth-service/v3/api-docs/**", "auth-service/swagger-ui/**", "auth-service/swagger-ui.html").permitAll();
+                    request.requestMatchers(HttpMethod.POST,
+                            "/api/v1/image",
+                            "/api/v1/image/{userId}").hasRole("ADMIN");
+                    request.requestMatchers(HttpMethod.POST,
+                            "/api/v1/auth/login",
+                            "/api/v1/auth/url/login",
+                            "/api/v1/auth/register",
+                            "/api/v1/auth/temporary-credentials").permitAll();
+                    request.requestMatchers(HttpMethod.PUT,
+                            "/api/v1/users/approve/{userId}",
+                            "/api/v1/users/reset-password/{userId}"
+                    ).hasRole("ADMIN");
+                    request.requestMatchers(HttpMethod.GET,
+                                    "/api/v1/users/{userId}").hasRole("ADMIN");
+                    })
                 .exceptionHandling()
                 .authenticationEntryPoint(authEntryPoint)
                 .and()

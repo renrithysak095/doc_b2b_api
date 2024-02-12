@@ -6,6 +6,7 @@ import com.example.authservice.response.AuthResponse;
 import com.example.authservice.service.user.UserService;
 import com.example.commonservice.response.ApiResponse;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -17,6 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("api/v1/users")
 @Tag(name = "Users")
+@SecurityRequirement(name = "bearerAuth")
 @CrossOrigin
 public class UserController {
     private final UserService userService;
