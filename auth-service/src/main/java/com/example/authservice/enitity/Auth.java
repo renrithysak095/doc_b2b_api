@@ -7,10 +7,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.Collections;
 
 @Data
 @AllArgsConstructor
@@ -36,8 +38,8 @@ public class Auth implements UserDetails {
     @Column(nullable = false)
     private LocalDateTime last_md;
 
-    public AuthResponse toDto(){
-        return new AuthResponse(id,username,url,deptId,role,image,cred_dt);
+    public AuthResponse toDto(String department){
+        return new AuthResponse(id,username,url,department,role,image,cred_dt);
     }
     public UserResponse toResponse(String token){
         return new UserResponse(id,username,token,deptId,role,image,provider,cred_dt,last_md);
@@ -55,7 +57,7 @@ public class Auth implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return Collections.singleton(new SimpleGrantedAuthority("ROLE_" + role));
     }
 
     @Override

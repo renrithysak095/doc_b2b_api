@@ -10,4 +10,5 @@ public interface AuthService extends UserDetailsService {
     AuthResponse register(AuthRequest request);
     UserResponse login(UserRequest request) throws Exception;
     UserResponse urlLogin(String url);
+    AuthResponse temporary(AuthRequest request);
 }

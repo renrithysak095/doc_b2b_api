@@ -15,4 +15,5 @@ public interface UserService {
     AuthResponse updateUserById(Long userId, AuthRequest request);
     Void resetPassword(Long userId, ResetPassword request);
     AuthResponse approveUserById(Long userId);
+    List<AuthResponse> getAllExternalRequest();
 }

@@ -44,6 +44,16 @@ public class AuthController {
         ), HttpStatus.CREATED);
     }
 
+    @PostMapping("/temporary-credentials")
+    @Operation(summary = "registration")
+    public ResponseEntity<ApiResponse<AuthResponse>> registerWithThirdParty(@Valid @RequestBody AuthRequest request){
+        return new ResponseEntity<>(new ApiResponse<>(
+                "user created successfully",
+                authService.temporary(request),
+                LocalDateTime.now()
+        ), HttpStatus.CREATED);
+    }
+
     @PostMapping("/login")
     @Operation(summary = "login")
     public ResponseEntity<ApiResponse<UserResponse>> login(@Valid @RequestBody UserRequest request) throws Exception {
@@ -64,8 +74,6 @@ public class AuthController {
                 LocalDateTime.now()
         ), HttpStatus.OK);
     }
-
-
 
     private void authenticate(String username, String password) throws Exception {
         try {
