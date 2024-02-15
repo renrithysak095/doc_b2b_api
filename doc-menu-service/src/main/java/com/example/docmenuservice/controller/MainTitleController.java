@@ -10,6 +10,7 @@ import com.example.docmenuservice.model.request.MainTitleRequest;
 import com.example.docmenuservice.model.request.SubTitleRequest;
 import com.example.docmenuservice.service.interfaces.MainTitleService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.core.io.ByteArrayResource;
@@ -30,6 +31,7 @@ import java.util.List;
 @RestController
 @RequestMapping("api/v1/main-titles")
 @Tag(name = "Main Title - Service")
+@SecurityRequirement(name = "bearerAuth")
 @CrossOrigin
 public class MainTitleController {
     private final MainTitleService mainTitleService;

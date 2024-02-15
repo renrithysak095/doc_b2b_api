@@ -5,6 +5,7 @@ import com.example.docmenuservice.model.dto.ContentDto;
 import com.example.docmenuservice.model.request.ContentRequest;
 import com.example.docmenuservice.service.interfaces.SubTitleService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,7 @@ import java.time.LocalDateTime;
 
 @RestController
 @RequestMapping("api/v1/contents")
+@SecurityRequirement(name = "bearerAuth")
 @Tag(name = "Content - Service")
 public class SubTitleController {
 

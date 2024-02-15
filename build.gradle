@@ -120,7 +120,8 @@ allprojects {
         }
 
         // Services - JWT Config Needed
-        if(projectDir.name.startsWith("auth-service")){
+        if(projectDir.name.startsWith("auth-service") ||
+            projectDir.name.startsWith("doc-menu-service")){
             implementation libraries.ioJWT
             implementation libraries.security
             testImplementation libraries.securityTest
