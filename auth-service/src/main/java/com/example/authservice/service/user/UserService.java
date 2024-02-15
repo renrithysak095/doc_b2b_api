@@ -9,11 +9,11 @@ import java.util.List;
 
 @Service
 public interface UserService {
-    List<AuthResponse> getAllUsers();
-    AuthResponse getUserById(Long userId);
+    List<AuthResponse> getAllUsers(String token);
+    AuthResponse getUserById(Long userId, String token);
     Void removeUserById(Long userId);
-    AuthResponse updateUserById(Long userId, AuthRequest request);
+    AuthResponse updateUserById(Long userId, AuthRequest request, String token);
     Void resetPassword(Long userId, ResetPassword request);
-    AuthResponse approveUserById(Long userId);
-    List<AuthResponse> getAllExternalRequest();
+    AuthResponse approveUserById(Long userId, String token);
+    List<AuthResponse> getAllExternalRequest(String token);
 }

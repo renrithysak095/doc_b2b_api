@@ -38,8 +38,8 @@ public class UserServiceImpl implements UserService {
         this.authClient = authClient;
     }
     @Override
-    public List<AuthResponse> getAllUsers() {
-        List<AuthResponse> users = authRepository.findAll().stream().map(m -> m.toDto(validateDepartment(m.getDeptId())))
+    public List<AuthResponse> getAllUsers(String token) {
+        List<AuthResponse> users = authRepository.findAll().stream().map(m -> m.toDto(validateDepartment(m.getDeptId(), token)))
                 .collect(Collectors.toList());
         if(!users.isEmpty()){
             return users;
@@ -48,8 +48,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public AuthResponse getUserById(Long userId) {
-        return findUserById(userId).toDto(validateDepartment(findUserById(userId).getDeptId()));
+    public AuthResponse getUserById(Long userId, String token) {
+        return findUserById(userId).toDto(validateDepartment(findUserById(userId).getDeptId(), token));
     }
 
     @Override
@@ -62,7 +62,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public AuthResponse updateUserById(Long userId, AuthRequest request) {
+    public AuthResponse updateUserById(Long userId, AuthRequest request, String token) {
         Auth auth = findUserById(userId);
         if(auth.getUsername().equalsIgnoreCase(request.getUsername())){
             throw new IllegalArgumentException(ValidationConfig.EXISTING_USERNAME);
@@ -75,7 +75,7 @@ public class UserServiceImpl implements UserService {
         auth.setDeptId(request.getDeptId());
         auth.setUsername(request.getUsername());
         auth.setLast_md(LocalDateTime.now());
-        return authRepository.save(auth).toDto(validateDepartment(auth.getDeptId()));
+        return authRepository.save(auth).toDto(validateDepartment(auth.getDeptId(), token));
     }
 
     @Override
@@ -93,15 +93,15 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public AuthResponse approveUserById(Long userId) {
+    public AuthResponse approveUserById(Long userId, String token) {
         Auth auth = findUserById(userId);
         auth.setStatus(true);
-        return authRepository.save(auth).toDto(validateDepartment(auth.getDeptId()));
+        return authRepository.save(auth).toDto(validateDepartment(auth.getDeptId(), token));
     }
 
     @Override
-    public List<AuthResponse> getAllExternalRequest() {
-        List<AuthResponse> users = authRepository.findAllByStatus(false).stream().map(m -> m.toDto(validateDepartment(m.getDeptId())))
+    public List<AuthResponse> getAllExternalRequest(String token) {
+        List<AuthResponse> users = authRepository.findAllByStatus(false).stream().map(m -> m.toDto(validateDepartment(m.getDeptId(),token)))
                 .collect(Collectors.toList());
         if(!users.isEmpty()){
             return users;
@@ -125,7 +125,7 @@ public class UserServiceImpl implements UserService {
     }
 
     // Validate is existing Department
-    public String validateDepartment(Long deptId){
+    public String validateDepartment(Long deptId, String token){
         ObjectMapper covertSpecificClass = new ObjectMapper();
         covertSpecificClass.registerModule(new JavaTimeModule());
         try{
@@ -134,6 +134,7 @@ public class UserServiceImpl implements UserService {
                     .build()
                     .get()
                     .uri("api/v1/departments/{id}", deptId)
+                    .headers(h -> h.setBearerAuth(token))
                     .retrieve()
                     .bodyToMono(ApiResponse.class)
                     .block()).getPayload(), DepartmentDto.class).getName();

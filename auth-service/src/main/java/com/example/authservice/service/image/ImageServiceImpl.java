@@ -22,7 +22,6 @@ import java.util.UUID;
 
 @Service
 public class ImageServiceImpl implements ImageService{
-
     private final FileStorageProperties fileStorageProperties;
     private final AuthRepository authRepository;
     private final ImageRepository imageRepository;

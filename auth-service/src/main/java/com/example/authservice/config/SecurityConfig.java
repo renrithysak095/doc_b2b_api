@@ -69,7 +69,9 @@ public class SecurityConfig {
                             "/api/v1/users/reset-password/{userId}"
                     ).hasRole("ADMIN");
                     request.requestMatchers(HttpMethod.GET,
-                                    "/api/v1/users/{userId}").hasRole("ADMIN");
+                                    "/api/v1/users/{userId}",
+                                    "/api/v1/users"
+                            ).hasRole("ADMIN");
                     })
                 .exceptionHandling()
                 .authenticationEntryPoint(authEntryPoint)

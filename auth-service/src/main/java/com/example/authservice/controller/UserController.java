@@ -8,6 +8,7 @@ import com.example.commonservice.response.ApiResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,30 +30,30 @@ public class UserController {
 
     @GetMapping
     @Operation(summary = "list users")
-    public ResponseEntity<ApiResponse<List<AuthResponse>>> userList(){
+    public ResponseEntity<ApiResponse<List<AuthResponse>>> userList(HttpServletRequest request){
         return new ResponseEntity<>(new ApiResponse<>(
                 "fetched all users successfully",
-                userService.getAllUsers(),
+                userService.getAllUsers(request.getHeader("Authorization").substring(7)),
                 LocalDateTime.now()
         ), HttpStatus.OK);
     }
 
     @GetMapping("/requests")
     @Operation(summary = "list external request")
-    public ResponseEntity<ApiResponse<List<AuthResponse>>> externalUserList(){
+    public ResponseEntity<ApiResponse<List<AuthResponse>>> externalUserList(HttpServletRequest request){
         return new ResponseEntity<>(new ApiResponse<>(
                 "fetched all external requests successfully",
-                userService.getAllExternalRequest(),
+                userService.getAllExternalRequest(request.getHeader("Authorization").substring(7)),
                 LocalDateTime.now()
         ), HttpStatus.OK);
     }
 
     @GetMapping("/{userId}")
     @Operation(summary = "get user by id")
-    public ResponseEntity<ApiResponse<AuthResponse>> getUserById(@PathVariable Long userId){
+    public ResponseEntity<ApiResponse<AuthResponse>> getUserById(@PathVariable Long userId, HttpServletRequest request){
         return new ResponseEntity<>(new ApiResponse<>(
                 "fetched users by id successfully",
-                userService.getUserById(userId),
+                userService.getUserById(userId,request.getHeader("Authorization").substring(7)),
                 LocalDateTime.now()
         ), HttpStatus.OK);
     }
@@ -60,20 +61,22 @@ public class UserController {
     @PutMapping("/{userId}")
     @Operation(summary = "updated user by id")
     public ResponseEntity<ApiResponse<AuthResponse>> updateUserById(@PathVariable Long userId,
-                                                                    @RequestBody @Valid AuthRequest request){
+                                                                    @RequestBody @Valid AuthRequest request,
+                                                                    HttpServletRequest requestToken){
         return new ResponseEntity<>(new ApiResponse<>(
                 "updated users by id successfully",
-                userService.updateUserById(userId,request),
+                userService.updateUserById(userId,request,requestToken.getHeader("Authorization").substring(7)),
                 LocalDateTime.now()
         ), HttpStatus.OK);
     }
 
     @PutMapping("/approve/{userId}")
     @Operation(summary = "approve user")
-    public ResponseEntity<ApiResponse<AuthResponse>> approveUserById(@PathVariable Long userId){
+    public ResponseEntity<ApiResponse<AuthResponse>> approveUserById(@PathVariable Long userId,
+                                                                     HttpServletRequest request){
         return new ResponseEntity<>(new ApiResponse<>(
                 "user had approved successfully",
-                userService.approveUserById(userId),
+                userService.approveUserById(userId,request.getHeader("Authorization").substring(7)),
                 LocalDateTime.now()
         ), HttpStatus.OK);
     }
